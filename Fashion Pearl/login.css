@@ -130,3 +130,9 @@ img {
     color: black;
     margin-bottom: 0;
 }
+
+.banner-content h1 span {
+    display: block; 
+}
+
+
