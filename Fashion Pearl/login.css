@@ -52,7 +52,7 @@ img {
     margin: 25px;
     font-weight: 500;
     font-size: 1rem;
-    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease; /* Smooth transitions for transform, color, and background */
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease; 
     position: relative;
     padding-left: 30px;
     padding-right: 30px;
@@ -68,4 +68,10 @@ img {
     padding-left: 30px;
     padding-right: 30px;
     transform: scale(1.1); 
+}
+
+.now{
+    color: black;
+    background-color: white;
+    transform: scale(1.1);
 }
