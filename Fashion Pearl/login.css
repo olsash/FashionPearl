@@ -42,3 +42,8 @@ img {
 .nav{
     margin-top: 20px;
 }
+
+.logo ion-icon {
+    margin-top: 10px;
+    font-size: 30px;
+}
