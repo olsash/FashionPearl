@@ -83,7 +83,10 @@ button:hover {
   background: #555;
 }
 
-
+.login-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
 
 
 
