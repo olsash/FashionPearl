@@ -225,3 +225,28 @@ img {
 .social-links a:hover {
     color: gray; 
 }
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0; 
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
