@@ -205,3 +205,23 @@ img {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
 }
 
+.social-links {
+    position: fixed;
+    left: 30px; 
+    top: 80%; 
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999; 
+}
+
+.social-links a {
+    color: #cacdd7;
+    font-size: 24px; 
+    text-decoration: none; 
+}
+
+.social-links a:hover {
+    color: gray; 
+}
