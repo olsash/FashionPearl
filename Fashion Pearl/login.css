@@ -144,6 +144,25 @@ img {
     margin-bottom: 0;
 }
 
+.shop-now-btn {
+    background-color: #b8acb6;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 1.2rem; 
+    cursor: pointer;
+    border-radius: 50px;
+    border-color: white;
+    border-width: 3px;
+    border-style: solid;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem; 
+    margin-right: 800px;
+}
+
+
 
 
 
