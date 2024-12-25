@@ -21,3 +21,15 @@ img {
     object-fit: cover; 
     display: block;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+    width: 96%;
+}
