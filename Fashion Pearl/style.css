@@ -193,4 +193,15 @@ img {
     width: 25px;
 }
 
+.white-ribbon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    width: 70px; 
+    height: 100vh; 
+    background-color: white; 
+    z-index: 998; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+}
 
