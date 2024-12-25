@@ -24,3 +24,14 @@ body {
     z-index: -1;
     filter: brightness(0.8); 
 }
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5); 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); 
+    text-align: center;
+}
