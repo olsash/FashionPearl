@@ -262,7 +262,9 @@ img {
     visibility: hidden; 
 }
 
-
+.photo:hover .photo-text {
+    visibility: visible;
+}
 
 
 
