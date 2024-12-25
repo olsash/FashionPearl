@@ -281,21 +281,18 @@ img {
     padding: 0 2rem;
 }
 
+.footer-nav {
+    margin-top: 10px;
+}
 
+.footer-nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer-nav a:hover {
+    color: #b8acb6;
+}
