@@ -90,3 +90,13 @@ button:hover {
     margin: 10px 0;
     font-size: 12px;
 }
+
+.options a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.options a:hover {
+    color: #000;
+}
