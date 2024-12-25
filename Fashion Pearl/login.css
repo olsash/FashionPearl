@@ -100,3 +100,8 @@ button:hover {
 .options a:hover {
     color: #000;
 }
+
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
