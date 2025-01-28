@@ -1,3 +1,44 @@
+<?php
+session_start(); 
+@include 'config.php'; 
+
+if ($_SERVER["REQUEST_METHOD"] == 'POST') {
+    $username = mysqli_real_escape_string($conn, $_POST["username"]);
+    $password = mysqli_real_escape_string($conn, $_POST["password"]);
+
+    $sql = "SELECT * FROM user_form WHERE username = '$username'";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result === false) {
+        die('Gabim SQL: ' . mysqli_error($conn));
+    }
+
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_array($result);
+
+        if (password_verify($password, $row["password"])) {
+            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['username'] = $row['username'];
+            $_SESSION['user_type'] = $row['user_type'];
+
+            if ($row["user_type"] == "user") {
+                header("Location: ../index user/indexUSER.php");
+                exit;
+            } elseif ($row["user_type"] == "admin") {
+                header("Location: ../index admin/indexADMIN.php");
+                exit;
+            } else {
+                echo "Lloji i përdoruesit është i panjohur!";
+            }
+        } else {
+            $error[] = 'Passwordi është i gabuar!';
+        }
+    } else {
+        $error[] = 'Përdoruesi nuk ekziston!';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
