@@ -35,14 +35,14 @@
 
    <section class="photo-gallery">
     <div class="photo">
-        <img src="model-image.png" alt="Photo 1">
+        <img src="../foto/model-image.png" alt="Photo 1">
     </div>
     <div class="photo">
-        <img src="jisoooo.jpg" alt="Photo 2">
+        <img src="../foto/jisoooo.jpg" alt="Photo 2">
         <div class="photo-text">Shop Now</div>
     </div>
     <div class="photo">
-        <img src="foto3.jpeg" alt="Photo 3">
+        <img src="../foto/foto3.jpeg" alt="Photo 3">
         <div class="photo-text">New Collection</div>
     </div>
   </section>
