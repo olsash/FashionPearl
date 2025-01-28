@@ -68,16 +68,12 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
             };
             ?>
 
-            <input type="text" placeholder="Email or Username" id="username" required>
-            <input type="password" placeholder="Password" id="password" required>
-            <div class="options">
-                <label>
-                    <input type="checkbox" id="rememberMe"> Remember Me
-                </label>
-                <a href="#" class="forgot-password">Forgot Password?</a>
-            </div>
-            <button type="submit">Login</button>
-            <p class="signup-link">New to FashionHub? <a href="register.html">Create an account</a></p>
+        <input type="text" name="username" placeholder="Username" id="username" required>
+        <input type="password" name="password" placeholder="Password" id="password" required>
+        <br>
+            <br>
+            <button type="submit" name = "submit">Login</button>
+            <p class="signup-link">New to FashionHub? <a href="../register/register.php">Create an account</a></p>
         </form>
     </div>
     
