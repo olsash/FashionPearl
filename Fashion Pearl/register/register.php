@@ -52,6 +52,15 @@ if (isset($_POST['submit'])) {
         <form>
             <h2>Create Your Account</h2>
             <p>Join us and stay updated with the latest trends.</p>
+
+            <?php
+            if(isset($error)){
+                foreach($error as $error){
+                    echo '<span class = "error-msg">'.$error.'</span>';
+                };
+            };
+            ?>
+
             <input type="text" placeholder="Full Name" id="fullname" required>
             <input type="email" placeholder="Email Address" id="email" required>
             <input type="password" placeholder="Password" id="password" required>
