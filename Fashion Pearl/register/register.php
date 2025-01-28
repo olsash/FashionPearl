@@ -44,6 +44,8 @@ if (isset($_POST['submit'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
+<body>
+
         <div class="background"></div>
     <div class="container">
         <div class="logo-wrapper">
@@ -72,6 +74,5 @@ if (isset($_POST['submit'])) {
         </form>
     </div>
         
-<body>
 </body>
 </html>
