@@ -61,12 +61,14 @@ if (isset($_POST['submit'])) {
             };
             ?>
 
-            <input type="text" placeholder="Full Name" id="fullname" required>
-            <input type="email" placeholder="Email Address" id="email" required>
-            <input type="password" placeholder="Password" id="password" required>
-            <input type="password" placeholder="Confirm Password" id="confirm-password" required>
-            <button type="submit">Register</button>
-            <p class="login-link">Already have an account? <a href="login.html">Log in</a></p>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <input type="email" name="email" placeholder="Email Address" id="email" required>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <input type="password" name="cpassword" placeholder="Confirm Password" id="confirm-password" required>
+            <br>
+            <br>
+            <button type="submit" name="submit">Register</button>
+            <p class="login-link">Already have an account? <a href="../login/login.php">Log in</a></p>
         </form>
     </div>
         
