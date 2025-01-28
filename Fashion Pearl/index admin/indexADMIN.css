@@ -276,4 +276,24 @@ img {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 90px; 
-  }
+}
+
+
+.footer-section {
+   flex: 1;
+   margin: 10px 80px;
+   margin-left: 145px;
+   margin-bottom: 20px;
+}
+  
+ .footer-section:nth-child(2) {
+   margin-left: 160px; 
+}
+  
+.footer-bottom {
+  width: 91%; 
+  margin-left: 70px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  text-align: left;
+}
