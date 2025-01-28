@@ -59,6 +59,15 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         <form>
             <h2>Welcome Back</h2>
             <p>Sign in to continue exploring the latest trends.</p>
+
+            <?php
+            if(isset($error)){
+                foreach($error as $error){
+                    echo '<span class = "error-msg">'.$error.'</span>';
+                };
+            };
+            ?>
+
             <input type="text" placeholder="Email or Username" id="username" required>
             <input type="password" placeholder="Password" id="password" required>
             <div class="options">
