@@ -1,3 +1,37 @@
+<?php
+session_start();
+
+@include '../login/config.php'; 
+if (isset($_POST['submit'])) {
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = $_POST['password'];
+    $cpassword = $_POST['cpassword'];
+    $user_type = $_POST['user_type'] ?? 'user'; 
+
+    $select = "SELECT * FROM user_form WHERE username = '$username' OR email = '$email'";
+    $result = mysqli_query($conn, $select);
+
+    if (mysqli_num_rows($result) > 0) {
+        $error[] = 'Përdoruesi ose emaili ekziston!'; 
+    } else {
+        if ($password != $cpassword) {
+            $error[] = 'Passwordi nuk përputhet!';
+        } else {
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+            $insert = "INSERT INTO user_form(username, email, password, user_type) VALUES('$username', '$email', '$hashed_password', '$user_type')";
+            if (mysqli_query($conn, $insert)) {
+                header('Location: ../login/login.php');
+                exit();
+            } else {
+                echo "Gabim: " . mysqli_error($conn);
+            }
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
