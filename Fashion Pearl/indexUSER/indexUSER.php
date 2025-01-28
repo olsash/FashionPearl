@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FashionPearl || Home</title>
-  <link rel="stylesheet" href="indexADMIN.css">
+  <link rel="stylesheet" href="indexUSER.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300&display=swap">
   <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
 </head>
@@ -12,7 +12,7 @@
    <header class="header">
     <a href="index.html" class="logo"><ion-icon name="menu-outline"></ion-icon></a>
     <nav class="nav">
-      <a class="now" href="indexADMIN.php">Home</a>
+      <a class="now" href="indexUSER.php">Home</a>
       <a href="#">Shop</a>
       <a href="#">Categories</a>
       <a href="#">About</a>
@@ -83,4 +83,4 @@
 </html>
 
 
-<script src="indexADMIN.js"></script>
+<script src="indexUSER.js"></script>
