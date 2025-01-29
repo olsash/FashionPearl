@@ -14,7 +14,6 @@
     <nav class="nav">
       <a class="now" href="indexADMIN.php">Home</a>
       <a href="#">Shop</a>
-      <a href="#">Categories</a>
       <a href="#">About</a>
       <a href="#">Support</a>
     </nav>
