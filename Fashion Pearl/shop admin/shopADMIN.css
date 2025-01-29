@@ -63,3 +63,14 @@ img {
    background-color: white;
    transform: scale(1.1);
 }
+
+.icons{
+   margin-top: 22px;
+}
+  
+.icons a {
+   font-size: 18px; 
+   color: black; 
+   text-decoration: none; 
+   margin-right: 15px; 
+}
