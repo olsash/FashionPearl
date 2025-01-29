@@ -43,13 +43,8 @@ img {
     margin-left: 385px;
 }
 
-.logo ion-icon {
-    margin-top: 10px;
-    font-size: 30px;
-}
-
 .nav a {
-    margin: 25px;
+    margin: 30px;
     font-weight: 500;
     font-size: 1rem;
     transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease; 
@@ -85,7 +80,7 @@ img {
   
   .separator {
     color: black; 
-    font-size: 15px; 
+    font-size: 25px; 
     margin-right: 15px; 
   }
 
