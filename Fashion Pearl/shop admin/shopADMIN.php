@@ -115,6 +115,30 @@
     </div>
 </div>
 
+<div class="filter-collapsible">
+            <h3 class="filter-toggle">Price Range
+            <ion-icon name="chevron-down-outline" class="toggle-icon"></ion-icon>
+            </h3>
+             <div class="filter-content">
+                <label class="filter-button">
+                <button class="button-value" onclick="filterProduct('0-50')"></button> <span>0€ - 50€</span>
+                </label>
+                <label class="filter-button">
+                <button class="button-value" onclick="filterProduct('50-100')"></button> <span>50€ - 100€</span>
+                </label>
+                <label class="filter-button">
+                <button class="button-value" onclick="filterProduct('100-150')"></button> <span>100€ - 150€</span>
+                </label>
+                <label class="filter-button">
+                <button class="button-value" onclick="filterProduct('150-more')"></button> <span>Over 150€</span>
+                </label>
+            </div>
+        </div>        
+    </div>
+</div>
+      
+</section>
+
 </main>
 <div class="sidebar" id="sidebar"></div>
 <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
