@@ -757,3 +757,44 @@ data: [
 ],
 };
   
+
+for (let i of products.data) {
+  let card = document.createElement("div");
+  card.classList.add("card", i.category, i.collections, "All");
+
+  let imgContainer = document.createElement("div");
+  imgContainer.classList.add("image-container");
+
+  let productLink = document.createElement("a");
+  productLink.href = `productDetails.php?name=${encodeURIComponent(i.productName)}&price=${i.price}&image=${encodeURIComponent(i.image)}`;
+  productLink.classList.add("product-link");
+
+  let image = document.createElement("img");
+  image.setAttribute("src", i.image);
+  imgContainer.appendChild(image);
+  productLink.appendChild(imgContainer);
+
+  card.appendChild(productLink);
+
+  let container = document.createElement("div");
+  container.classList.add("container");
+
+  let name = document.createElement("h5");
+  name.classList.add("product-name");
+  name.innerText = i.productName.toUpperCase();
+  container.appendChild(name);
+
+  let price = document.createElement("h6");
+  price.innerText = i.price + "€";
+  container.appendChild(price);
+
+  let addToCartIcon = document.createElement("div");
+  addToCartIcon.classList.add("add-to-cart-icon");
+  addToCartIcon.innerHTML = `<ion-icon name="cart-outline"></ion-icon>`;
+  addToCartIcon.addEventListener("click", () => {
+    alert(`${i.productName} added to cart!`);
+  });
+
+  card.appendChild(container);
+  document.getElementById("products").appendChild(card);
+}
