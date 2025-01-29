@@ -245,4 +245,45 @@ h3 {
    color: #fff;
    border-color: #333;
 }
+
+
+.filter-collapsible {
+   border-bottom: 1px solid #e0e0e0;
+   padding-bottom: 10px;
+}
     
+.filter-collapsible:last-child {
+    border-bottom: none;
+}
+    
+   .separator2 {
+   border-top: 1px solid #e0e0e0;
+   margin: 10px 0;
+}
+    
+    
+.filter-toggle {
+   margin-top:20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   cursor: pointer;
+}
+    
+.toggle-icon {
+   font-size: 16px;
+   transition: transform 0.3s ease;
+}
+    
+.filter-toggle.active .toggle-icon {
+   transform: rotate(180deg); 
+}
+    
+.filter-content {
+   display: none;
+   margin-top: 10px;
+}
+    
+.filter-toggle.active + .filter-content {
+   display: block;
+}
