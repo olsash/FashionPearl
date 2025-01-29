@@ -846,6 +846,21 @@ document.getElementById("search-icon").addEventListener("click", () => {
   }
 });
 
+document.getElementById("search-icon").addEventListener("click", () => {
+let searchInput = document.getElementById("search-input").value;
+let elements = document.querySelectorAll(".product-name");
+let cards = document.querySelectorAll(".card");
+
+elements.forEach((element, index) => {
+  if (element.innerText.includes(searchInput.toUpperCase())) {
+    cards[index].classList.remove("hide");
+  } else {
+    cards[index].classList.add("hide");
+  }
+});
+});
+
+
 window.onload = () => {
     filterProduct("All");
     };
