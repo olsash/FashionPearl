@@ -35,3 +35,31 @@ img {
    margin-top: 13px;
    font-size: 35px;
 }
+
+.nav a {
+   margin: 30px;
+   font-weight: 500;
+   font-size: 1rem;
+   transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease; 
+   position: relative;
+   padding-left: 30px;
+   padding-right: 30px;
+   padding-top: 10px;
+   padding-bottom: 10px; 
+   border-radius: 20px;
+   font-weight: bold;
+}
+  
+.nav a:hover {
+   color: black;
+   background-color: white;
+   padding-left: 30px;
+   padding-right: 30px;
+   transform: scale(1.1); 
+}
+  
+.shop{
+   color: black;
+   background-color: white;
+   transform: scale(1.1);
+}
