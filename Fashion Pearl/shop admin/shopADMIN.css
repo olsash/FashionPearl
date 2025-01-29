@@ -218,4 +218,31 @@ h3 {
    text-align: center;
    cursor: pointer;
 }
+
+
+.button-value:hover {
+   background-color: #f0f0f0;
+}
+    
+.button-value {
+   background-color: #f4f4f4;
+   border: 1px solid #ccc;
+   color: #333;
+   padding: 5px 5px;
+   margin: 5px;
+   margin-right:10px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s, color 0.3s;
+}
+    
+.button-value:hover {
+   background-color: #ddd;
+}
+    
+.button-value.active {
+   background-color: #333;
+   color: #fff;
+   border-color: #333;
+}
     
