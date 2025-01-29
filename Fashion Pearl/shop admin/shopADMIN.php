@@ -43,6 +43,25 @@
     </div>
 </div>
 
+<div class="separator2"></div>
+    <div class="filter-section">
+        <div class="filter-collapsible">
+        <h3 class="filter-toggle">Category
+        <ion-icon name="chevron-down-outline" class="toggle-icon"></ion-icon>
+        </h3>
+        <div class="filter-content">
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Women')"></button> <span>Women</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Men')"></button> <span>Men</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Accesories')"></button> <span>Accesories</span>
+        </label>
+    </div>
+</div>
+
 </main>
 <div class="sidebar" id="sidebar"></div>
 <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
