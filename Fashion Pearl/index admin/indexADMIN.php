@@ -21,7 +21,7 @@
       <a href="#"><ion-icon name="search"></ion-icon></a>
       <a href="#"><ion-icon name="cart"></ion-icon></a>
       <span class="separator">|</span>
-      <a href="register.html"><ion-icon name="person-circle-outline"></ion-icon></a>
+      <a ><ion-icon name="person-circle-outline" onclick="checkLogin()"></ion-icon></a>
     </div>
   </header>
   <main class="main-banner">
@@ -31,7 +31,8 @@
       <button class="shop-now-btn">Shop now</button>
     </div>
   </main>
-
+  <div class="sidebar" id="sidebar"></div>
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
    <section class="photo-gallery">
     <div class="photo">
         <img src="../foto/model-image.png" alt="Photo 1">
