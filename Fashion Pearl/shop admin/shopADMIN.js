@@ -798,3 +798,56 @@ for (let i of products.data) {
   card.appendChild(container);
   document.getElementById("products").appendChild(card);
 }
+
+
+function filterProduct(value) {
+let buttons = document.querySelectorAll(".button-value");
+buttons.forEach((button) => {
+  if (value.toUpperCase() == button.innerText.toUpperCase()) {
+    button.classList.add("active");
+  } else {
+    button.classList.remove("active");
+  }
+});
+
+let elements = document.querySelectorAll(".card");
+elements.forEach((element) => {
+  const price = parseInt(element.querySelector("h6").innerText.replace("€", ""));
+  let show = false;
+
+  if (value.includes("-")) {
+    const [min, max] = value.split("-").map((v) => (v === "more" ? Infinity : parseInt(v)));
+    if (price >= min && price <= max) {
+      show = true;
+    }
+  }
+  else if (value == "All" || element.classList.contains(value)) {
+    show = true;
+  }
+
+  if (show) {
+    element.classList.remove("hide");
+  } else {
+    element.classList.add("hide");
+  }
+});
+}
+
+
+document.getElementById("search-icon").addEventListener("click", () => {
+  const searchInput = document.getElementById("search-input");
+  if (searchInput.classList.contains("hidden")) {
+    searchInput.classList.remove("hidden");
+    searchInput.classList.add("visible");
+    searchInput.focus();
+  } else {
+    searchInput.classList.add("hidden");
+    searchInput.classList.remove("visible");
+  }
+});
+
+window.onload = () => {
+    filterProduct("All");
+    };
+    
+    
