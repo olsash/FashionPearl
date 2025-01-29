@@ -251,6 +251,12 @@ h3 {
    text-align: center;
    cursor: pointer;
 }
+.filter-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
 
 
 .button-value:hover {
