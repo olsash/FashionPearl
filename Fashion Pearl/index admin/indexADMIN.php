@@ -10,7 +10,7 @@
 </head>
 <body>
    <header class="header">
-    <a href="index.html" class="logo"><ion-icon name="menu-outline"></ion-icon></a>
+   <!-- <a href="index.html" class="logo"><ion-icon name="menu-outline"></ion-icon></a> -->
     <nav class="nav">
       <a class="now" href="indexADMIN.php">Home</a>
       <a href="#">Shop</a>
