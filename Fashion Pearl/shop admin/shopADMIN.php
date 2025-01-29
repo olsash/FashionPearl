@@ -28,6 +28,21 @@
 </div>
 </header>
 <main>
+
+<div class="filter-container">
+    <div class="filter-title"><h2>Filters</h2></div>
+
+    <div class="filter-section">
+        <h3>Size</h3>
+        <div class="filter-options">
+            <div class="filter-option">XS</div>
+            <div class="filter-option">S</div>
+            <div class="filter-option">M</div>
+            <div class="filter-option">L</div>
+            <div class="filter-option">XL</div>
+    </div>
+</div>
+
 </main>
 <div class="sidebar" id="sidebar"></div>
 <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
