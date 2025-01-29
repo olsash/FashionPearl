@@ -234,7 +234,7 @@ img {
     justify-content: center;
     align-items: center;
     gap: 0; 
-    height: 100vh;
+    min-height: 80vh; 
     width: 100%;
     position: relative;
 }
