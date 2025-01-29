@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     <div class="container">
         <div class="logo-wrapper">
         </div>
-        <form>
+        <form action="" method="post">
             <h2>Welcome Back</h2>
             <p>Sign in to continue exploring the latest trends.</p>
 

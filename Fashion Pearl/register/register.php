@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
         <div class="logo-wrapper">
         <!--    <img src="your-logo.png" alt="FashionHub Logo" class="logo"> -->
         </div>
-        <form>
+        <form method="POST" action="register.php">
             <h2>Create Your Account</h2>
             <p>Join us and stay updated with the latest trends.</p>
 
