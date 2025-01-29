@@ -863,6 +863,6 @@ elements.forEach((element, index) => {
 
 window.onload = () => {
     filterProduct("All");
-    };
+};
     
     
