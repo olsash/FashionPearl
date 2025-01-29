@@ -139,6 +139,12 @@
       
 </section>
 
+<div class="products">
+    <h2>ADMIN</h2>
+    <div class="product-grid" id="products"></div>
+</div>
+</div>
+
 </main>
 <div class="sidebar" id="sidebar"></div>
 <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
