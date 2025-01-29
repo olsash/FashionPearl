@@ -4,10 +4,9 @@ body {
     color: #333;
     background: gray;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-bottom: 80px; 
 }
 
 a {
