@@ -168,3 +168,15 @@ main {
    padding: 20px;
    align-items: flex-start;  
 }
+
+.filter-container {
+   font-family: 'Roboto', sans-serif;
+   padding: 20px;
+  
+}
+  
+.filter-title {
+   font-size: 18px;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
