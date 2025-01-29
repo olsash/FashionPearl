@@ -27,6 +27,13 @@
   <a><ion-icon name="person-circle-outline" onclick="checkLogin()"></ion-icon></a>
 </div>
 </header>
+<div id="search-bar-container" style="display: none;">
+  <div class="search-bar-overlay" onclick="toggleSearchBar()"></div>
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search products...">
+    <button onclick="performSearch()">Search</button>
+  </div>
+</div>
 <main>
 
 <div class="filter-container">
