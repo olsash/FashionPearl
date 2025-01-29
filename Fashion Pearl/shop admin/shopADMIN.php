@@ -62,6 +62,59 @@
     </div>
 </div>
 
+<div class="filter-collapsible">
+    <h3 class="filter-toggle">Collections
+    <ion-icon name="chevron-down-outline" class="toggle-icon"></ion-icon>
+    </h3>
+    <div class="filter-content">
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('All')"></button> <span>All</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Tops')"></button> <span>Tops</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('T-Shirt')"></button> <span>T-Shirt</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Sweater')"></button> <span>Sweater</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Jeans')"></button> <span>Jeans</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Skirt')"></button> <span>Skirt</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Dress')"></button> <span>Dress</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Hat')"></button> <span>Hat</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Shoes')"></button> <span>Shoes</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Watch')"></button> <span>Watch</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Bags')"></button> <span>Bags</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Sunnglasses')"></button> <span>Sunnglasses</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Necklace')"></button> <span>Necklace</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Earrings')"></button> <span>Earrings</span>
+        </label>
+        <label class="filter-button">
+        <button class="button-value" onclick="filterProduct('Ring')"></button> <span>Ring</span>
+        </label>
+    </div>
+</div>
+
 </main>
 <div class="sidebar" id="sidebar"></div>
 <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
