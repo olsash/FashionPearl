@@ -24,7 +24,7 @@ if (isset($_SESSION['username'])) {
     <nav class="nav">
       <a class="now" href="indexADMIN.php">Home</a>
       <a href="../shop admin/shopADMIN.php">Shop</a>
-      <a href="#">About</a>
+      <a href="../about admin/aboutADMIN.php">About</a>
       <a href="#">Support</a>
     </nav>
     <div class="icons">
