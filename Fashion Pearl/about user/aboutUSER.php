@@ -30,3 +30,33 @@
             <a><ion-icon name="person-circle-outline" onclick="checkLogin()"></ion-icon></a>
         </div>
     </header>
+<main>
+        <!-- Slider Section -->
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide"><img src="../foto/1.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="../foto/2.jpg" alt="Image 2"></div>
+                <div class="slide"><img src="../foto/3.jpg" alt="Image 3"></div>
+                <div class="slide"><img src="../foto/4.jpg" alt="Image 4"></div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        </main>
+        <!-- About Section -->
+        <section class="about-content">
+            <?php 
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="about-section" data-aos="fade-up">';
+                    echo '<span class="about-icon">' . htmlspecialchars($row["icon"]) . '</span>';
+                    echo '<div>';
+                    echo '<h2>' . htmlspecialchars($row["title"]) . '</h2>';
+                    echo '<p>' . nl2br(htmlspecialchars($row["content"])) . '</p>';
+                    echo '</div></div>';
+                }
+            } else {
+                echo "<p>No content available.</p>";
+            }
+            ?>
+        </section>
