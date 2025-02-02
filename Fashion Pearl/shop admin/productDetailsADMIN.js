@@ -79,3 +79,39 @@ sizeButtons.forEach(button => {
     updateCartUI();
     updateCartCount();
 });
+
+function updateCartUI() {
+    cartItemsContainer.innerHTML = "";
+    cart.forEach((item, index) => {
+        const cartItem = document.createElement("div");
+        cartItem.classList.add("cart-item");
+        cartItem.innerHTML = `
+            <div class="cart-item-content">
+                <img src="${item.image}" class="cart-item-image" alt="${item.productName}">
+                <div class="cart-item-details">
+                    <p class="cart-item-name">${item.productName}</p>
+                    <p class="cart-item-price">Qty: ${item.quantity} | $${(item.price * item.quantity).toFixed(2)} | Size: ${item.size}</p>
+                </div>
+                <button onclick="removeCartItem(${index})" class="cart-remove-btn">x</button>
+            </div>
+        `;
+        cartItemsContainer.appendChild(cartItem);
+    });
+}
+
+    function updateCartCount() {
+        const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+        cartCount.textContent = totalItems;
+        cartCount.style.display = totalItems > 0 ? "inline" : "none";
+    }
+
+    window.removeCartItem = function (index) {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartUI();
+        updateCartCount();
+    };
+
+    updateCartUI();
+    updateCartCount();
+});
