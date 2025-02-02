@@ -326,6 +326,87 @@ h3 {
     font-size: 14px;
 }
 
+@media (max-width: 1200px) {
+   .banner-content h1 {
+     font-size: 80px;
+   }
+ }
+ 
+ @media (max-width: 992px) {
+   .banner-content h1 {
+     font-size: 60px;
+     text-align: center;
+   }
+ 
+   .banner-content p {
+     font-size: 1.3rem;
+     text-align: center;
+   }
+ 
+   .header {
+     flex-direction: column;
+     align-items: center;
+   }
+ 
+   main {
+     flex-direction: column;
+     align-items: center;
+   }
+ 
+   .filter-container {
+     text-align: center;
+   }
+ }
+ 
+ @media (max-width: 768px) {
+   .banner-content h1 {
+     font-size: 45px;
+   }
+ 
+   .banner-content p {
+     font-size: 1rem;
+   }
+ 
+   .ribbon {
+     height: 70px;
+   }
+ 
+   .header {
+     padding: 1rem;
+   }
+ 
+   main {
+     padding: 10px;
+   }
+ }
+ 
+ @media (max-width: 480px) {
+   .banner-content h1 {
+     font-size: 35px;
+   }
+ 
+   .banner-content p {
+     font-size: 0.9rem;
+   }
+ 
+   .ribbon {
+     height: 60px;
+   }
+ 
+   .filter-title {
+     font-size: 16px;
+   }
+ 
+   .filter-section h3 {
+     font-size: 14px;
+   }
+ 
+   .filter-option {
+     font-size: 12px;
+     padding: 4px 8px;
+   }
+ }
+ 
 
 .button-value:hover {
    background-color: #f0f0f0;
