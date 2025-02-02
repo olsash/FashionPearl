@@ -1,3 +1,71 @@
+<?php
+session_start();
+@include '../login/config.php';
+
+
+$username = $_SESSION['username'];
+
+if (empty($username)) {
+    echo "Përdoruesi nuk është gjetur!";
+    exit();
+}
+
+$username = mysqli_real_escape_string($conn, $username);
+
+$query = "SELECT * FROM user_form WHERE username = '$username'";
+$result = mysqli_query($conn, $query);
+
+if ($result) {
+    $user = mysqli_fetch_assoc($result);
+    if (!$user) {
+        echo "Përdoruesi nuk është gjetur në bazën e të dhënave!";
+        exit();
+    }
+} else {
+    echo "Gabim në ekzekutimin e query-t: " . mysqli_error($conn);
+    exit();
+}
+
+$query = "SELECT * FROM `contact_form`";
+$result = mysqli_query($conn, $query);
+
+if ($result) {
+    $messages = mysqli_fetch_all($result, MYSQLI_ASSOC);
+} else {
+    echo "Error fetching messages: " . mysqli_error($conn);
+}
+
+$username = mysqli_real_escape_string($conn, $username);
+
+$query = "SELECT * FROM user_form WHERE username = '$username'";
+$result = mysqli_query($conn, $query);
+
+if ($result) {
+    $user = mysqli_fetch_assoc($result);
+    if (!$user) {
+        echo "Përdoruesi nuk është gjetur në bazën e të dhënave!";
+        exit();
+    }
+} else {
+    echo "Gabim në ekzekutimin e query-t: " . mysqli_error($conn);
+    exit();
+}
+
+$sql = "SELECT question, answer FROM faqs";
+$result = $conn->query($sql);
+
+$faqs = [];
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $faqs[] = $row;
+    }
+}
+
+$conn->close();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,3 +163,4 @@
   <p>&copy; 2025 FashionPearl. All rights reserved.</p>
 </div>
 </footer>
+</html>
