@@ -1,4 +1,97 @@
+<?php
+@include '../login/config.php';
+session_start();
 
+if (!isset($_SESSION['user_id'])) {
+    die("Access denied.");
+}
+$user_id = $_SESSION['user_id'];
+
+$query = "SELECT username FROM user_form WHERE id = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$stmt->bind_result($username);
+$stmt->fetch();
+$stmt->close();
+
+if (!$username) {
+    die("User not found.");
+}
+
+$product_name = $_GET['product_name'] ?? ''; 
+if (!$product_name) {
+    die("Invalid request: Product name missing.");
+}
+
+$query = "SELECT id, price, category, collections, image FROM products WHERE product_name = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("s", $product_name);
+$stmt->execute();
+$stmt->store_result();
+$stmt->bind_result($product_id, $price, $category, $collection, $image);
+
+if (!$stmt->fetch()) {
+    die("Product not found.");
+}
+
+$stmt->close();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $new_name = $_POST['new_name'] ?? '';
+    $new_price = $_POST['new_price'] ?? '';
+    $new_category = $_POST['new_category'] ?? '';
+    $new_collections = $_POST['new_collections'] ?? '';
+    $new_image = $image;  
+
+    if (!$new_name || !$new_price || !$new_category || !$new_collections) {
+        die("Please fill in all required fields.");
+    }
+
+    if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
+        $target_dir = "uploads/";
+        if (!is_dir($target_dir)) {
+            mkdir($target_dir, 0777, true);
+        }
+
+        $image_file = basename($_FILES['image']['name']);
+        $image_tmp = $_FILES['image']['tmp_name'];
+        $target_file = $target_dir . $image_file;
+
+        $allowed_types = ['image/jpeg', 'image/png', 'image/gif'];
+        if (in_array($_FILES['image']['type'], $allowed_types) && $_FILES['image']['size'] < 5000000) {
+            if (move_uploaded_file($image_tmp, $target_file)) {
+                $new_image = $target_file;
+            } else {
+                die("Failed to move uploaded file.");
+            }
+        } else {
+            die("Invalid file type or file size too large.");
+        }
+    }
+
+    $query = "UPDATE products SET product_name = ?, price = ?, category = ?, collections = ?, image = ? WHERE id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("sdsssi", $new_name, $new_price, $new_category, $new_collections, $new_image, $product_id);
+
+    if ($stmt->execute()) {
+        $log_query = "INSERT INTO product_logs (product_id, product_name, price, category, collection, action_type, user_id, username, action_timestamp) 
+                      VALUES (?, ?, ?, ?, ?, 'edit', ?, ?, NOW())";
+
+        $log_stmt = $conn->prepare($log_query);
+        $log_stmt->bind_param("isdssis", $product_id, $new_name, $new_price, $new_category, $new_collections, $user_id, $username);
+        $log_stmt->execute();
+        $log_stmt->close();
+
+        echo "Product updated successfully!";
+        header("Location: shopADMIN.php");
+        exit;
+    } else {
+        die("Error updating product: " . $stmt->error);
+    }
+}
+
+?>
 
   <!DOCTYPE html>
   <html lang="en">
