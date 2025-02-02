@@ -120,3 +120,4 @@
               <p>&copy; 2024 FashionPearl. All rights reserved.</p>
           </div>
       </footer>
+</html>
