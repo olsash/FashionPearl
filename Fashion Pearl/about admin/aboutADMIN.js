@@ -42,3 +42,17 @@ function checkLogin() {
       document.getElementById('sidebar').style.display = 'none';
       document.getElementById('overlay').style.display = 'none';
     }
+
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+    const slider = document.querySelector(".slider");
+
+    let currentIndex = 0;
+    function moveSlide(direction) {
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+        document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+    
+    
