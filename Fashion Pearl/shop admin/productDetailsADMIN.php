@@ -35,3 +35,32 @@
         </div>
     </div>
 </div>
+
+</div>
+  </header>
+
+<body>
+    <div class="container">
+        <div class="product-grid">
+            <!-- Product Image -->
+            <div class="product-image">
+                <img src="<?php echo htmlspecialchars($image_path); ?>" alt="Product Image">
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1><?php echo htmlspecialchars($product_name); ?></h1>
+                <h2>Price: <?php echo $formatted_price; ?>€</h2>
+
+                <!-- Reviews -->
+                <div class="reviews">
+                    <div class="stars">★★★★★</div>
+                    <span class="review-text">20 reviews</span>
+                </div>
+
+                <!-- Description -->
+                <p class="description">
+                    The FashionPearl clothing offers elegant and modern outfits designed for style and comfort.
+                    Made from high-quality fabrics, each piece blends sophistication with everyday wearability.
+                </p>
+                <p class="usage">For Every occasion, blending modern trends with timeless elegance.</p>
