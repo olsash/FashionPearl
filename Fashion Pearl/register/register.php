@@ -45,8 +45,7 @@ if (isset($_POST['submit'])) {
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-
-        <div class="background"></div>
+    <div class="background"></div>
     <div class="container">
         <div class="logo-wrapper">
         <!--    <img src="your-logo.png" alt="FashionHub Logo" class="logo"> -->
@@ -67,12 +66,14 @@ if (isset($_POST['submit'])) {
             <input type="email" name="email" placeholder="Email Address" id="email" required>
             <input type="password" name="password" placeholder="Password" id="password" required>
             <input type="password" name="cpassword" placeholder="Confirm Password" id="confirm-password" required>
-            <br>
+            <select name="user_type">
+         <option value="user">user</option>
+         <option value="admin">admin</option>
+      </select>
             <br>
             <button type="submit" name="submit">Register</button>
             <p class="login-link">Already have an account? <a href="../login/login.php">Log in</a></p>
         </form>
     </div>
-        
 </body>
 </html>

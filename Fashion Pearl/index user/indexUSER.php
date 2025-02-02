@@ -23,14 +23,11 @@ if (isset($_SESSION['username'])) {
    <!-- <a href="index.html" class="logo"><ion-icon name="menu-outline"></ion-icon></a> -->
     <nav class="nav">
       <a class="now" href="indexUSER.php">Home</a>
-      <a href="../shop admin/shopADMIN.php">Shop</a>
+      <a href="../shop user/shopUSER.php">Shop</a>
       <a href="#">About</a>
       <a href="#">Support</a>
     </nav>
     <div class="icons">
-      <a href="#"><ion-icon name="search"></ion-icon></a>
-      <a href="#"><ion-icon name="cart"></ion-icon></a>
-      <span class="separator">|</span>
       <a ><ion-icon name="person-circle-outline" onclick="checkLogin()"></ion-icon></a>
     </div>
   </header>

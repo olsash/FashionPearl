@@ -1,5 +1,7 @@
 <?php
 session_start();
+@include '../login/config.php';
+
 
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
@@ -32,8 +34,24 @@ if (isset($_SESSION['username'])) {
 <div class="icons">
   <a href="#" id="search-icon"><ion-icon name="search"></ion-icon></a>
   <input type="text" id="search-input" class="hidden" placeholder="Search products...">
-  <a href="#"><ion-icon name="cart"></ion-icon></a>
-  <span class="separator">|</span>
+      <a href="#" id="cart-icon">
+        <ion-icon name="cart"></ion-icon>
+        <span id="cart-count">0</span>
+    </a>
+
+    <div id="cart-sidebar">
+        <div class="cart-header">
+            <h2 class="cart-title">Shopping Cart</h2>
+            <button id="close-cart">&times;</button>
+        </div>
+        <div id="cart-items">
+        </div>
+        <div id="total-price-container">
+        </div>
+        <div class="cart-footer">
+            <button id="checkout">Checkout</button>
+        </div>    
+</div>  <span class="separator">|</span>
   <a><ion-icon name="person-circle-outline" onclick="checkLogin()"></ion-icon></a>
 </div>
 </header>
@@ -68,13 +86,13 @@ if (isset($_SESSION['username'])) {
         </h3>
         <div class="filter-content">
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Women')"></button> <span>Women</span>
+        <button class="button-value" onclick="filterProduct('Women')" data-category="Women"></button> <span>Women</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Men')"></button> <span>Men</span>
+        <button class="button-value" onclick="filterProduct('Men')" data-category="Men"></button> <span>Men</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Accesories')"></button> <span>Accesories</span>
+        <button class="button-value" onclick="filterProduct('Accessories')" data-category="Accessories"></button> <span>Accesories</span>
         </label>
     </div>
 </div>
@@ -85,49 +103,49 @@ if (isset($_SESSION['username'])) {
     </h3>
     <div class="filter-content">
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('All')"></button> <span>All</span>
+        <button class="button-value" onclick="filterProduct('All')" data-category="All"></button> <span>All</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Tops')"></button> <span>Tops</span>
+        <button class="button-value" onclick="filterProduct('Tops')" data-category="Tops"></button> <span>Tops</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('T-Shirt')"></button> <span>T-Shirt</span>
+        <button class="button-value" onclick="filterProduct('T-Shirt')" data-category="TShirt"></button> <span>T-Shirt</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Sweater')"></button> <span>Sweater</span>
+        <button class="button-value" onclick="filterProduct('Sweater')" data-category="Sweater"></button> <span>Sweater</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Jeans')"></button> <span>Jeans</span>
+        <button class="button-value" onclick="filterProduct('Jeans')" data-category="Jeans"></button> <span>Jeans</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Skirt')"></button> <span>Skirt</span>
+        <button class="button-value" onclick="filterProduct('Skirt')" data-category="Skirt"></button> <span>Skirt</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Dress')"></button> <span>Dress</span>
+        <button class="button-value" onclick="filterProduct('Dress')" data-category="Dress"></button> <span>Dress</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Hat')"></button> <span>Hat</span>
+        <button class="button-value" onclick="filterProduct('Hat')" data-category="Hat"></button> <span>Hat</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Shoes')"></button> <span>Shoes</span>
+        <button class="button-value" onclick="filterProduct('Shoes')" data-category="Shoes"></button> <span>Shoes</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Watch')"></button> <span>Watch</span>
+        <button class="button-value" onclick="filterProduct('Watch')" data-category="Watch"></button> <span>Watch</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Bags')"></button> <span>Bags</span>
+        <button class="button-value" onclick="filterProduct('Bags')" data-category="Bags"></button> <span>Bags</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Sunnglasses')"></button> <span>Sunnglasses</span>
+        <button class="button-value" onclick="filterProduct('Sunglasses')" data-category="Sunglasses"></button> <span>Sunnglasses</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Necklace')"></button> <span>Necklace</span>
+        <button class="button-value" onclick="filterProduct('Necklace')" data-category="Necklace"></button> <span>Necklace</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Earrings')"></button> <span>Earrings</span>
+        <button class="button-value" onclick="filterProduct('Earrings')" data-category="Earrings"></button> <span>Earrings</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Ring')"></button> <span>Ring</span>
+        <button class="button-value" onclick="filterProduct('Ring')" data-category="Ring"></button> <span>Ring</span>
         </label>
     </div>
 </div>
@@ -138,16 +156,16 @@ if (isset($_SESSION['username'])) {
             </h3>
              <div class="filter-content">
                 <label class="filter-button">
-                <button class="button-value" onclick="filterProduct('0-50')"></button> <span>0€ - 50€</span>
+                <button class="button-value" onclick="filterProduct('0-50')" data-category="0-50"></button> <span>0€ - 50€</span>
                 </label>
                 <label class="filter-button">
-                <button class="button-value" onclick="filterProduct('50-100')"></button> <span>50€ - 100€</span>
+                <button class="button-value" onclick="filterProduct('50-100')" data-category="50-100"></button> <span>50€ - 100€</span>
                 </label>
                 <label class="filter-button">
-                <button class="button-value" onclick="filterProduct('100-150')"></button> <span>100€ - 150€</span>
+                <button class="button-value" onclick="filterProduct('100-150')" data-category="100-150"></button> <span>100€ - 150€</span>
                 </label>
                 <label class="filter-button">
-                <button class="button-value" onclick="filterProduct('150-more')"></button> <span>Over 150€</span>
+                <button class="button-value" onclick="filterProduct('150-more')" data-category="150-more"></button> <span>Over 150€</span>
                 </label>
             </div>
         </div>        
@@ -155,12 +173,111 @@ if (isset($_SESSION['username'])) {
 </div>
       
 </section>
+</section>
+    <button id="toggle-table-btn" class="table-button">View Product Logs</button>
+
+<div id="table-popup" class="table-popup">
+    <div class="table-container">
+        <span class="close-button" onclick="closeTablePopup()">&times;</span>
+        <h2>Product Logs</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Collection</th>
+                    <th>Product Category</th>
+                    <th>Action Type</th>
+                    <th>User ID</th>
+                    <th>Username</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+
+                
+                $query = "SELECT * FROM product_logs ORDER BY action_timestamp DESC";
+                $result = mysqli_query($conn, $query);
+
+                
+                if ($result) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td>{$row['id']}</td>";
+                        echo "<td>{$row['product_id']}</td>";
+                        echo "<td>{$row['product_name']}</td>";
+                        echo "<td>{$row['price']}</td>";
+                        echo "<td>{$row['collection']}</td>";
+                        echo "<td>{$row['category']}</td>";
+                        echo "<td>{$row['action_type']}</td>";
+                        echo "<td>{$row['user_id']}</td>";
+                        echo "<td>{$row['username']}</td>";
+                        echo "<td>{$row['action_timestamp']}</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='6'>No logs available.</td></tr>";
+                }
+
+                
+                ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 <div class="products">
-    <h2>ADMIN</h2>
+    <h2>Our Products </h2>
+    <button id="add-product-btn" class="plus-button">+</button>
     <div class="product-grid" id="products"></div>
 </div>
+<div class="add-product-container" id="add-product-container">
+    <h2>Add New Product</h2>
+    <form action="addProduct.php" method="POST" enctype="multipart/form-data" class="add-product-form">
+        <label for="product_name">Product Name:</label>
+        <input type="text" name="product_name" id="product_name" required>
+
+        <label for="price">Price (€):</label>
+        <input type="number" step="0.01" name="price" id="price" required>
+
+        <label for="category">Category:</label>
+        <select name="category" id="category" required>
+            <option value="Women">Women</option>
+            <option value="Men">Men</option>
+            <option value="Accessories">Accessories</option>
+        </select>
+
+        <label for="collections">Collections:</label>
+        <select name="collections" id="collections">
+            <option value="Tops">Tops</option>
+            <option value="TShirt">T-Shirt</option>
+            <option value="Sweater">Sweater</option>
+            <option value="Jeans">Jeans</option>
+            <option value="Skirt">Skirt</option>
+            <option value="Dress">Dress</option>
+            <option value="Hat">Hat</option>
+            <option value="Shoes">Shoes</option>
+            <option value="Watch">Watch</option>
+            <option value="Bags">Bags</option>
+            <option value="Sunglasses">Sunglasses</option>
+            <option value="Necklace">Necklace</option>
+            <option value="Earrings">Earrings</option>
+            <option value="Ring">Ring</option>
+        </select>
+
+        <label for="image">Upload Image:</label>
+        <input type="file" name="image" id="image" required>
+
+        <button type="submit" class="add-product-btn">Add Product</button>
+        <button type="button" class="close-btn" id="close-btn">Close</button>
+    </form>
 </div>
+
+
+<div class="modal-overlay"></div>
 
 </main>
 <div class="sidebar" id="sidebar"></div>

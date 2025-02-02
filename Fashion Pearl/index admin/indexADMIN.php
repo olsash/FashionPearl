@@ -28,9 +28,6 @@ if (isset($_SESSION['username'])) {
       <a href="#">Support</a>
     </nav>
     <div class="icons">
-      <a href="#"><ion-icon name="search"></ion-icon></a>
-      <a href="#"><ion-icon name="cart"></ion-icon></a>
-      <span class="separator">|</span>
       <a ><ion-icon name="person-circle-outline" onclick="checkLogin()"></ion-icon></a>
     </div>
   </header>
