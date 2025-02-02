@@ -278,10 +278,10 @@ if (isset($_SESSION['username'])) {
 
 
 <div class="modal-overlay"></div>
-                
+
 </main>
 <div class="sidebar" id="sidebar"></div>
-<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+<div class="overlay" id="overlay" onclick="Sidebar.close()"></div>
 
 <footer class="footer">
 <div class="footer-section">

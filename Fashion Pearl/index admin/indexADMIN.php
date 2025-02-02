@@ -28,7 +28,7 @@ if (isset($_SESSION['username'])) {
       <a href="#">Support</a>
     </nav>
     <div class="icons">
-      <a ><ion-icon name="person-circle-outline" onclick="checkLogin()"></ion-icon></a>
+      <a ><ion-icon name="person-circle-outline" onclick="Auth.checkLogin()"></ion-icon></a>
     </div>
   </header>
   <main class="main-banner">
@@ -39,7 +39,7 @@ if (isset($_SESSION['username'])) {
     </div>
   </main>
   <div class="sidebar" id="sidebar"></div>
-  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+  <div class="overlay" id="overlay" onclick="Sidebar.close()"></div>
    <section class="photo-gallery">
     <div class="photo">
         <img src="../foto/model-image.png" alt="Photo 1">

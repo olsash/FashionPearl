@@ -42,7 +42,7 @@ if ($result) {
 
 <div class="sidebar-header">
     <span>Hello, <?php echo htmlspecialchars($user['username']); ?> !</span>
-    <button onclick="closeSidebar()" style="border: none; background: none; font-size: 24px; cursor: pointer;">&times;</button>
+    <button onclick="Sidebar.close()" style="border: none; background: none; font-size: 24px; cursor: pointer;">&times;</button>
 </div>
 
 <div class="sidebar-content">
