@@ -657,3 +657,42 @@ body {
     margin-right: 15px;
     border: 2px solid #cdd0da;
   }
+  .cart-item-details {
+    flex-grow: 1;
+    text-align: left;
+  }
+  
+  .cart-item-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 3px;
+  }
+  
+  .cart-item-price {
+    font-size: 14px;
+    color: #777;
+    margin-top: 3px;
+  }
+  
+  .cart-remove-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: gray;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-right: 10px;
+  }
+  
+  .cart-remove-btn:hover {
+    color: #ddd;
+    transform: scale(1.2);
+  }
+  
+  .cart-footer {
+    padding: 15px;
+    background: #f8f8f8;
+    border-top: 1px solid #ddd;
+    text-align: center;
+  }
