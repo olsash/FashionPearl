@@ -139,3 +139,5 @@ $sizes = ['XS','S', 'M', 'L', 'XL'];
           </div>
       </footer>
 </html>
+
+<script src="productDetailsADMIN.js"></script>
