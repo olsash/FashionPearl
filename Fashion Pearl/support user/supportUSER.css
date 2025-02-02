@@ -164,3 +164,80 @@ word-wrap: break-word;
 .arrow {
     color:rgb(251, 246, 246);
 }
+
+a {
+    text-decoration: none;
+    color: #333;
+ }
+   
+ img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+ }
+ 
+ .logo {
+    color: black;
+ }
+   
+ .nav{
+    margin-top: 20px;
+    margin-left : 385px;
+ }
+   
+ .logo ion-icon {
+    margin-top: 13px;
+    font-size: 35px;
+ }
+ 
+ .nav a {
+    margin: 30px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease; 
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    border-radius: 20px;
+    font-weight: bold;
+ }
+   
+ .nav a:hover {
+    color: black;
+    background-color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    transform: scale(1.1); 
+ }
+   
+ .shop{
+    color: black;
+    background-color: white;
+    transform: scale(1.1);
+ }
+ 
+ 
+ #search-input {
+   display: none;
+   position: absolute;
+   right: 170px; 
+   top: 65%; 
+   transform: translateY(-50%);
+   padding: 5px 10px;
+   border: 1px solid #ccc;
+   border-radius: 20px;
+   font-size: 1rem;
+   width: 200px;
+   outline: none;
+   z-index: 1000;
+   transition: opacity 0.3s ease, visibility 0.3s ease;
+ }
+ 
+ #search-input.visible {
+   display: block;
+   opacity: 1;
+   visibility: visible;
+ }
