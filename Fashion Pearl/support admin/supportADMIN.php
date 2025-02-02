@@ -74,6 +74,8 @@ $conn->close();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="supportADMIN.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
 
@@ -168,3 +170,5 @@ $conn->close();
 </div>
 </footer>
 </html>
+
+<script src="supportADMIN.js"></script>
