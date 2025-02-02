@@ -1,3 +1,21 @@
+<?php
+$product_name = filter_input(INPUT_GET, 'name', FILTER_SANITIZE_STRING) ?? 'Unknown Product';
+$price = filter_input(INPUT_GET, 'price', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION) ?? 0;
+$image = filter_input(INPUT_GET, 'image', FILTER_SANITIZE_URL) ?? 'default-image.jpg';
+
+$formatted_price = number_format($price, 2, '.', ',');
+$image_path = file_exists($image) ? $image : 'default-image.jpg';
+$sizes = ['XS','S', 'M', 'L', 'XL'];
+
+?>
+
+<script>
+    const productName = "<?php echo htmlspecialchars($product_name); ?>";
+    const productPrice = <?php echo $formatted_price; ?>;
+    const productImage = "<?php echo htmlspecialchars($image_path); ?>";
+</script>
+
+
 <!DOCTYPE html>
   <html lang="en">
   <head>
