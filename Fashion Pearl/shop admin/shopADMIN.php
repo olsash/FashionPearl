@@ -1,5 +1,7 @@
 <?php
 session_start();
+@include '../login/config.php';
+
 
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
