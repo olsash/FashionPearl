@@ -23,7 +23,7 @@ if (isset($_SESSION['username'])) {
    <!-- <a href="index.html" class="logo"><ion-icon name="menu-outline"></ion-icon></a> -->
     <nav class="nav">
       <a class="now" href="indexUSER.php">Home</a>
-      <a href="../shop admin/shopADMIN.php">Shop</a>
+      <a href="../shop user/shopUSER.php">Shop</a>
       <a href="#">About</a>
       <a href="#">Support</a>
     </nav>
