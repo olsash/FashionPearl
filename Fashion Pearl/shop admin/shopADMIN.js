@@ -168,3 +168,67 @@ document.getElementById("toggle-table-btn").addEventListener("click", function (
 function closeTablePopup() {
   document.getElementById("table-popup").style.display = "none";
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cartIcon = document.getElementById("cart-icon");
+  const cartCount = document.getElementById("cart-count");
+  const cartSidebar = document.getElementById("cart-sidebar");
+  const closeCart = document.getElementById("close-cart");
+  const cartItemsContainer = document.getElementById("cart-items");
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+  function updateCartCount() {
+  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+  
+  if (totalItems > 0) {
+      cartCount.textContent = totalItems;
+      cartCount.style.display = "inline"; 
+  } else {
+      cartCount.style.display = "none"; 
+  }
+}
+
+  function updateCartUI() {
+      cartItemsContainer.innerHTML = "";
+      cart.forEach((item, index) => {
+          const cartItem = document.createElement("div");
+          cartItem.classList.add("cart-item");
+          cartItem.innerHTML = `
+              <div class="cart-item-content">
+              <img src="${item.image}" class="cart-item-image" alt="${item.productName}"> <!-- Image on the left -->
+              <div class="cart-item-details">
+              <p class="cart-item-name">${item.productName}</p>
+              <p class="cart-item-price">Qty: ${item.quantity} | $${(item.price * item.quantity).toFixed(2)}</p>
+              </div>
+              <button onclick="removeCartItem(${index})" class="cart-remove-btn">x</button> <!-- Remove button on the right -->
+              </div>
+
+          `;
+          cartItemsContainer.appendChild(cartItem);
+      });
+  }
+  
+  document.getElementById("cart-icon").addEventListener("click", function() {
+  document.getElementById("cart-sidebar").classList.toggle("open");
+});
+
+document.getElementById("close-cart").addEventListener("click", function() {
+  document.getElementById("cart-sidebar").classList.remove("open");
+});
+
+
+  window.removeCartItem = function (index) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartUI();
+      updateCartCount();
+  };
+
+  updateCartUI();
+  updateCartCount();
+});
+
