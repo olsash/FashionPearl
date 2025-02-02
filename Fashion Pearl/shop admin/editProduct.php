@@ -403,3 +403,113 @@ main {
   padding: 20px;
   align-items: flex-start;  
 }
+
+@media (max-width: 1024px) {
+  #search-input {
+    right: 20px;
+    width: 150px;
+  }
+
+  .banner-content {
+    width: 90%; 
+    padding: 0 1rem;
+  }
+
+  .banner-content h1 {
+    font-size: 60px; 
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .banner-content p {
+    font-size: 1.2rem;
+    margin-right: 0;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  main {
+    flex-direction: column; 
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  #search-input {
+    width: 120px; 
+    right: 10px;
+  }
+
+  .banner-content h1 {
+    font-size: 50px; 
+    margin-right: 0;
+  }
+
+  .banner-content p {
+    font-size: 1.1rem;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .main-banner {
+    height: 80%; 
+  }
+
+  .banner-content {
+    padding: 0;
+    width: 100%;
+  }
+
+  .icons {
+    margin-top: 15px;
+  }
+
+  .icons a {
+    font-size: 16px; 
+  }
+
+  .separator {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #search-input {
+    width: 100px;
+    right: 5px; 
+  }
+
+  .banner-content h1 {
+    font-size: 40px;
+    margin-right: 0;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .main-banner {
+    height: 70%; 
+  }
+
+  .banner-content {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .icons a {
+    font-size: 14px; 
+  }
+
+  .separator {
+    font-size: 18px;
+  }
+}
