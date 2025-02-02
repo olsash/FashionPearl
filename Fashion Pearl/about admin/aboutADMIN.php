@@ -104,3 +104,4 @@ $result = $conn->query($sql);
         </div>
     </footer>
 </body>
+</html>
