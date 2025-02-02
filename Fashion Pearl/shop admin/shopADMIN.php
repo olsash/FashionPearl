@@ -32,8 +32,24 @@ if (isset($_SESSION['username'])) {
 <div class="icons">
   <a href="#" id="search-icon"><ion-icon name="search"></ion-icon></a>
   <input type="text" id="search-input" class="hidden" placeholder="Search products...">
-  <a href="#"><ion-icon name="cart"></ion-icon></a>
-  <span class="separator">|</span>
+  <a href="#" id="search-icon"><ion-icon name="search"></ion-icon></a>
+      <input type="text" id="search-input" class="hidden" placeholder="Search products...">
+      <a href="#" id="cart-icon">
+        <ion-icon name="cart"></ion-icon>
+        <span id="cart-count">0</span>
+    </a>
+
+    <div id="cart-sidebar">
+        <div class="cart-header">
+            <h2 class="cart-title">Shopping Cart</h2>
+            <button id="close-cart">&times;</button>
+        </div>
+        <div id="cart-items">
+        </div>
+        <div class="cart-footer">
+            <button id="checkout">Checkout</button>
+        </div>    
+</div>  <span class="separator">|</span>
   <a><ion-icon name="person-circle-outline" onclick="checkLogin()"></ion-icon></a>
 </div>
 </header>
