@@ -44,3 +44,15 @@
             <div class="user-info">
                 </span>
             </div>
+
+            <div class="help-sections">
+    <?php foreach ($faqs as $faq): ?>
+    <div class="section">
+        <button class="accordion"><?= htmlspecialchars($faq['question']); ?> <span>&#9662;</span></button>
+        <div class="panel"><?= nl2br(htmlspecialchars($faq['answer'])); ?></div>
+    </div>
+    <?php endforeach; ?>
+</div>
+
+        
+    </div>
