@@ -73,3 +73,25 @@
       box-shadow: 0 0 10px rgba(229, 234, 246, 0.3);
       outline: none;
     }
+
+    input[type="submit"] {
+      background-color: #153c4d;
+      color: white;
+      border: none;
+      padding: 18px 28px;
+      border-radius: 12px;
+      font-size: 18px;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.3s ease;
+    }
+  
+    input[type="submit"]:hover {
+      background-color: #0d4766;
+      transform: translateY(-4px);
+    }
+  
+    input[type="submit"]:active {
+      transform: translateY(2px);
+    }
+  </style>
