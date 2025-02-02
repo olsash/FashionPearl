@@ -32,7 +32,6 @@
     </header>
 
     <main>
-        <!-- Slider Section -->
         <div class="slider-container">
             <div class="slider">
                 <div class="slide"><img src="../foto/1.jpg" alt="Image 1"></div>
@@ -44,7 +43,6 @@
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
         </main>
-        <!-- About Section -->
         <section class="about-content">
             <?php 
             if ($result->num_rows > 0) {
