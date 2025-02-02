@@ -1,3 +1,19 @@
+
+<?php
+session_start();
+
+@include '../login/config.php';
+
+if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+} else {
+    $username = null;
+}
+// Handle API requests
+$sql = "SELECT icon, title, content FROM about_sections";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
