@@ -38,21 +38,23 @@ $sizes = ['XS','S', 'M', 'L', 'XL'];
     <div class="icons">
     <a href="#" id="cart-icon">
     <ion-icon name="cart"></ion-icon>
-        <span id="cart-count">0</span>
-    </a>
+    <span id="cart-count">0</span>
+</a>
 
-    <div id="cart-sidebar">
-        <div class="cart-header">
-            <h2>Shopping Cart</h2>
-            <button id="close-cart">&times;</button>
-        </div>
-        <div id="cart-items">
-        </div>
-        <div class="cart-footer">
-            <button id="checkout">Checkout</button>
-        </div>
+<div id="cart-sidebar">
+    <div class="cart-header">
+        <h2>Shopping Cart</h2>
+        <button id="close-cart">&times;</button>
+    </div>
+    <div id="cart-items">
+    </div>
+    <div id="total-price-container">
+    </div>
+    <div class="cart-footer">
+        <button id="checkout">Checkout</button>
     </div>
 </div>
+    </div>
 
 </div>
   </header>
@@ -988,6 +990,25 @@ $sizes = ['XS','S', 'M', 'L', 'XL'];
       gap: 6px; 
   }
 }
+
+#total-price-container {
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #f8f8f8;
+    color: #333;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#total-price-container p {
+    margin-right:15px;
+    font-family: 'Roboto', sans-serif;
+    color: gray; 
+    font-size: 13px;
+    text-align: right;
+}
     </style>
 </body>
 <footer class="footer">
@@ -1099,6 +1120,11 @@ sizeButtons.forEach(button => {
     updateCartCount();
 });
 
+function calculateTotalPrice() {
+    let totalPrice = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+    return totalPrice.toFixed(2); 
+}
+
 function updateCartUI() {
     cartItemsContainer.innerHTML = "";
     cart.forEach((item, index) => {
@@ -1109,13 +1135,19 @@ function updateCartUI() {
                 <img src="${item.image}" class="cart-item-image" alt="${item.productName}">
                 <div class="cart-item-details">
                     <p class="cart-item-name">${item.productName}</p>
-                    <p class="cart-item-price">Qty: ${item.quantity} | $${(item.price * item.quantity).toFixed(2)} | Size: ${item.size}</p>
+                    <p class="cart-item-price">Qty: ${item.quantity} | ${(item.price * item.quantity).toFixed(2)}€ | Size: ${item.size}</p>
                 </div>
                 <button onclick="removeCartItem(${index})" class="cart-remove-btn">x</button>
             </div>
         `;
         cartItemsContainer.appendChild(cartItem);
     });
+
+    const totalPrice = calculateTotalPrice();
+    const totalPriceContainer = document.getElementById("total-price-container");
+    totalPriceContainer.innerHTML = `
+        <p>Total: ${totalPrice}€</p>
+    `;
 }
 
     function updateCartCount() {

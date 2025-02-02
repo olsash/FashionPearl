@@ -161,23 +161,34 @@ if (totalItems > 0) {
 }
 }
 
+function calculateTotalPrice() {
+  let totalPrice = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+  return totalPrice.toFixed(2); 
+}
+
 function updateCartUI() {
-    cartItemsContainer.innerHTML = "";
-    cart.forEach((item, index) => {
-        const cartItem = document.createElement("div");
-        cartItem.classList.add("cart-item");
-        cartItem.innerHTML = `
-            <div class="cart-item-content">
-            <img src="${item.image}" class="cart-item-image" alt="${item.productName}"> <!-- Image on the left -->
-            <div class="cart-item-details">
-            <p class="cart-item-name">${item.productName}</p>
-            <p class="cart-item-price">Qty: ${item.quantity} | $${(item.price * item.quantity).toFixed(2)}</p>
-            </div>
-            <button onclick="removeCartItem(${index})" class="cart-remove-btn">x</button> <!-- Remove button on the right -->
-            </div>
-        `;
-        cartItemsContainer.appendChild(cartItem);
-    });
+  cartItemsContainer.innerHTML = "";
+  cart.forEach((item, index) => {
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("cart-item");
+      cartItem.innerHTML = `
+          <div class="cart-item-content">
+              <img src="${item.image}" class="cart-item-image" alt="${item.productName}">
+              <div class="cart-item-details">
+                  <p class="cart-item-name">${item.productName}</p>
+                  <p class="cart-item-price">Qty: ${item.quantity} | ${(item.price * item.quantity).toFixed(2)}€ | Size: ${item.size}</p>
+              </div>
+              <button onclick="removeCartItem(${index})" class="cart-remove-btn">x</button>
+          </div>
+      `;
+      cartItemsContainer.appendChild(cartItem);
+  });
+
+  const totalPrice = calculateTotalPrice();
+  const totalPriceContainer = document.getElementById("total-price-container");
+  totalPriceContainer.innerHTML = `
+      <p>Total: ${totalPrice}€</p>
+  `;
 }
 
 document.getElementById("cart-icon").addEventListener("click", function() {

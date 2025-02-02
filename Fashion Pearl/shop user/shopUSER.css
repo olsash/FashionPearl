@@ -959,3 +959,21 @@ display: none;
     font-size: 16px;
   }
 }
+#total-price-container {
+   padding: 0px;
+   font-size: 18px;
+   font-weight: bold;
+   background-color: #f8f8f8;
+   color: #333;
+   border-top: 1px solid #ddd;
+   text-align: center;
+   margin-bottom: 0px;
+}
+
+#total-price-container p {
+   margin-right:17px;
+   font-family: 'Roboto', sans-serif;
+   color: gray; 
+   font-size: 13px;
+   text-align: right;
+}

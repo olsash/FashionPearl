@@ -43,6 +43,8 @@ if (isset($_SESSION['username'])) {
         </div>
         <div id="cart-items">
         </div>
+        <div id="total-price-container">
+        </div>
         <div class="cart-footer">
             <button id="checkout">Checkout</button>
         </div>    
