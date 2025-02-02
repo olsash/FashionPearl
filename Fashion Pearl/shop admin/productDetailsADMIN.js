@@ -50,3 +50,32 @@ sizeButtons.forEach(button => {
         alert("Please select a size before adding to cart!");
         return;
     }
+
+    const productName = "<?php echo htmlspecialchars($product_name); ?>";
+    const productPrice = parseFloat("<?php echo str_replace(',', '', $formatted_price); ?>");
+    const productImage = "<?php echo htmlspecialchars($image_path); ?>";
+    const quantity = parseInt(document.getElementById("quantity").value, 10);
+
+    if (isNaN(quantity) || quantity < 1) {
+        alert("Please enter a valid quantity.");
+        return;
+    }
+
+    let existingItem = cart.find(item => item.productName === productName && item.size === selectedSize);
+    
+    if (existingItem) {
+        existingItem.quantity += quantity;
+    } else {
+        cart.push({ 
+            productName, 
+            price: productPrice, 
+            image: productImage, 
+            quantity, 
+            size: selectedSize  
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartUI();
+    updateCartCount();
+});
