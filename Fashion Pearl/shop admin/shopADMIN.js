@@ -144,4 +144,27 @@ window.onload = () => {
     filterProduct("All");
 };
     
-    
+
+document.getElementById("add-product-btn").addEventListener("click", function() {
+  document.getElementById("add-product-container").style.display = "block";
+  document.querySelector(".modal-overlay").style.display = "block";
+  setTimeout(() => {
+      document.getElementById("add-product-container").style.opacity = "1";
+  }, 10);
+});
+
+document.getElementById("close-btn").addEventListener("click", function() {
+  document.getElementById("add-product-container").style.opacity = "0";
+  setTimeout(() => {
+      document.getElementById("add-product-container").style.display = "none";
+      document.querySelector(".modal-overlay").style.display = "none";
+  }, 300);
+});
+
+document.getElementById("toggle-table-btn").addEventListener("click", function () {
+  document.getElementById("table-popup").style.display = "block";
+});
+
+function closeTablePopup() {
+  document.getElementById("table-popup").style.display = "none";
+}
