@@ -20,6 +20,8 @@ $result = $conn->query($sql);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FashionPearl || About Us</title>
+  <link rel="stylesheet" href="aboutADMIN.css">
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
   <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
@@ -120,3 +122,4 @@ $result = $conn->query($sql);
     }
 </script>
 </html>
+<script src="aboutADMIN.js"></script>

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FashionPearl || About Us</title>
+  <link rel="stylesheet" href="aboutUSER.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
   <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
@@ -104,3 +105,5 @@
         
 </script>
 </html>
+
+<script src="aboutUSER.js"></script>
