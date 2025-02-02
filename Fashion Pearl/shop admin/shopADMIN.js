@@ -40,7 +40,6 @@ function checkLogin() {
 fetch("fetchProducts.php")
       .then(response => response.json())
       .then(products => {
-        // Loop through each product and display it
         products.data.forEach(i => {
           let card = document.createElement("div");
           card.classList.add("card", i.category, i.collections, "All");
@@ -110,6 +109,7 @@ elements.forEach((element) => {
     element.classList.add("hide");
   }
 });
+console.log("Filter applied:", value);
 }
 
 

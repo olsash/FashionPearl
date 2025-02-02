@@ -157,9 +157,49 @@ if (isset($_SESSION['username'])) {
 </section>
 
 <div class="products">
-    <h2>ADMIN</h2>
+    <h2>Our Products </h2>
     <div class="product-grid" id="products"></div>
 </div>
+<div class="add-product-container" id="add-product-container">
+    <h2>Add New Product</h2>
+    <form action="addProduct.php" method="POST" enctype="multipart/form-data" class="add-product-form">
+        <label for="product_name">Product Name:</label>
+        <input type="text" name="product_name" id="product_name" required>
+
+        <label for="price">Price (€):</label>
+        <input type="number" step="0.01" name="price" id="price" required>
+
+        <label for="category">Category:</label>
+        <select name="category" id="category" required>
+            <option value="Women">Women</option>
+            <option value="Men">Men</option>
+            <option value="Accessories">Accessories</option>
+        </select>
+
+        <label for="collections">Collections:</label>
+        <select name="collections" id="collections">
+            <option value="Tops">Tops</option>
+            <option value="TShirt">T-Shirt</option>
+            <option value="Sweater">Sweater</option>
+            <option value="Jeans">Jeans</option>
+            <option value="Skirt">Skirt</option>
+            <option value="Dress">Dress</option>
+            <option value="Hat">Hat</option>
+            <option value="Shoes">Shoes</option>
+            <option value="Watch">Watch</option>
+            <option value="Bags">Bags</option>
+            <option value="Sunglasses">Sunglasses</option>
+            <option value="Necklace">Necklace</option>
+            <option value="Earrings">Earrings</option>
+            <option value="Ring">Ring</option>
+        </select>
+
+        <label for="image">Upload Image:</label>
+        <input type="file" name="image" id="image" required>
+
+        <button type="submit" class="add-product-btn">Add Product</button>
+        <button type="button" class="close-btn" id="close-btn">Close</button>
+    </form>
 </div>
 
 </main>
