@@ -1,8 +1,53 @@
+<?php
+session_start();
+@include '../login/config.php';
+
+
+$username = $_SESSION['username'];
+
+if (empty($username)) {
+    echo "Përdoruesi nuk është gjetur!";
+    exit();
+}
+
+$username = mysqli_real_escape_string($conn, $username);
+
+$query = "SELECT * FROM user_form WHERE username = '$username'";
+$result = mysqli_query($conn, $query);
+
+if ($result) {
+    $user = mysqli_fetch_assoc($result);
+    if (!$user) {
+        echo "Përdoruesi nuk është gjetur në bazën e të dhënave!";
+        exit();
+    }
+} else {
+    echo "Gabim në ekzekutimin e query-t: " . mysqli_error($conn);
+    exit();
+}
+
+$sql = "SELECT question, answer FROM faqs";
+$result = $conn->query($sql);
+
+$faqs = [];
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $faqs[] = $row;
+    }
+}
+
+$conn->close();
+
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="supportUSER.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
 
@@ -80,3 +125,6 @@
   <p>&copy; 2024 FashionPearl. All rights reserved.</p>
 </div>
 </footer>
+
+    </html>
+    <script src="supportUSER.js"></script>
