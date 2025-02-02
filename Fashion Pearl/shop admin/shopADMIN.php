@@ -34,8 +34,6 @@ if (isset($_SESSION['username'])) {
 <div class="icons">
   <a href="#" id="search-icon"><ion-icon name="search"></ion-icon></a>
   <input type="text" id="search-input" class="hidden" placeholder="Search products...">
-  <a href="#" id="search-icon"><ion-icon name="search"></ion-icon></a>
-      <input type="text" id="search-input" class="hidden" placeholder="Search products...">
       <a href="#" id="cart-icon">
         <ion-icon name="cart"></ion-icon>
         <span id="cart-count">0</span>
