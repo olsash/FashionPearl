@@ -23,3 +23,33 @@
   <a><ion-icon name="person-circle-outline" onclick="checkLogin()"></ion-icon></a>
 </div>
 </header>
+
+<title>Help Center</title>
+    
+</head>
+<body>
+<form id="questionForm">
+<div class="qa-container">
+    <input type="text" id="question" name="question" placeholder="Ask a question..." required>
+    <button type="submit">Ask</button>
+</div>
+<div id="answer-container">
+    <div id="answer"></div>
+</div>
+</form>
+    <div class="container">
+    <button id="viewMessagesBtn">View Messages</button>
+
+<div id="messagesContainer"></div>
+
+<!-- Optionally, you can use this table structure if you prefer table format -->
+<table id="messagesTable" style="display:none;">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Created At</th>
+        </tr>
+    </thead>
+    <tbody>
