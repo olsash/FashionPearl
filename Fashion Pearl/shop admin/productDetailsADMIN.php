@@ -71,3 +71,12 @@
                         </button>
                     <?php endforeach; ?>
                 </div>
+                <div class="quantity">
+                    <label for="quantity">QTY:</label>
+                    <input id="quantity" type="number" value="1" min="1">
+                </div>
+
+                <button id="add-to-cart-button">Add to Cart</button>
+
+                <div class="additional-info">
+                    <p>Dispatched in 5 – 7 weeks.</p>
