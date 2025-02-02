@@ -395,3 +395,69 @@ body {
       font-size: 18px;
     }
   }
+
+  .reviews {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.stars {
+    color: #fbbf24;
+    font-size: 18px;
+}
+
+.review-text {
+    margin-left: 10px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.description {
+    color: #374151;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.usage {
+    color: #374151;
+    margin-bottom: 20px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.quantity label {
+    color: #374151;
+    margin-right: 10px;
+}
+
+.quantity input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#add-to-cart-button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+#add-to-cart-button:hover {
+    background-color: #333;
+}
+
+.additional-info {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6b7280;
+}
