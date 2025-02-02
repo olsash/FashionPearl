@@ -64,3 +64,11 @@
                     Made from high-quality fabrics, each piece blends sophistication with everyday wearability.
                 </p>
                 <p class="usage">For Every occasion, blending modern trends with timeless elegance.</p>
+                <h3 class="select-size"><strong>Select Size:</strong></h3>
+                <div class="size-options">
+                    <?php foreach ($sizes as $size): ?>
+                        <button class="size-button" data-size="<?php echo $size; ?>">
+                            <?php echo $size; ?>
+                        </button>
+                    <?php endforeach; ?>
+                </div>
