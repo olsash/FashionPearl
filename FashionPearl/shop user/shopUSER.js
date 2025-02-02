@@ -57,7 +57,7 @@ class Auth {
         imgContainer.classList.add("image-container");
   
         let productLink = document.createElement("a");
-        productLink.href = `productDetailsADMIN.php?name=${encodeURIComponent(product.product_name)}&price=${product.price}&image=${encodeURIComponent(product.image)}`;
+        productLink.href = `productDetailsUSER.php?name=${encodeURIComponent(product.product_name)}&price=${product.price}&image=${encodeURIComponent(product.image)}`;
         productLink.classList.add("product-link");
   
         let image = document.createElement("img");

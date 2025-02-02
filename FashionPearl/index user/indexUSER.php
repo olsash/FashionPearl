@@ -25,7 +25,7 @@ if (isset($_SESSION['username'])) {
       <a class="now" href="indexUSER.php">Home</a>
       <a href="../shop user/shopUSER.php">Shop</a>
       <a href="../about user/aboutUSER.php">About</a>
-      <a href="#">Support</a>
+      <a href="../support user/supportUSER.php">Support</a>
     </nav>
     <div class="icons">
       <a ><ion-icon name="person-circle-outline" onclick="checkLogin()"></ion-icon></a>

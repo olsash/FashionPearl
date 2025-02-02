@@ -28,8 +28,8 @@ if (isset($_SESSION['username'])) {
   <nav class="nav">
   <a class="now" href="../index admin/indexADMIN.php">Home</a>
   <a class="shop" href="shopADMIN.php">Shop</a>
-  <a href="#">About</a>
-  <a href="#">Support</a>
+  <a href="../about admin/aboutADMIN.php">About</a>
+  <a href="../support admin/supportADMIN.php">Support</a>
 </nav>
 <div class="icons">
   <a href="#" id="search-icon"><ion-icon name="search"></ion-icon></a>
