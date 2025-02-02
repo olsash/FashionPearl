@@ -24,3 +24,17 @@ body: "question=" + encodeURIComponent(question)
 document.getElementById("answer").innerHTML = data;
 });
 });
+
+document.getElementById("questionForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    let answerContainer = document.getElementById("answer-container");
+    let answerElement = document.getElementById("answer");
+
+    let answerText = "This is a sample answer!";
+
+    if (answerText.trim() !== "") {
+        answerElement.textContent = answerText;
+        answerContainer.style.display = "flex"; 
+    }
+});
