@@ -202,6 +202,9 @@ if (isset($_SESSION['username'])) {
     </form>
 </div>
 
+
+<div class="modal-overlay"></div>
+
 </main>
 <div class="sidebar" id="sidebar"></div>
 <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
