@@ -142,7 +142,7 @@ $conn->close();
     </div>
     <?php endforeach; ?>
 </div>
-
+    </div>
 <footer class="footer">
 <div class="footer-section">
   <h3>FashionPearl</h3>

@@ -38,7 +38,7 @@ $result = $conn->query($sql);
 
     <header class="header">
         <nav class="nav">
-        <a class="now" href="indexUSER.php">Home</a>
+        <a class="now" href="../index USER/indexUSER.php">Home</a>
         <a href="../shop user/shopUSER.php">Shop</a>
         <a class="about" href="aboutUSER.php">About</a>
         <a href="../support user/supportUSER.php">Support</a>

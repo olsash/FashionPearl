@@ -57,7 +57,7 @@ $conn->close();
 
 <header class="header">
   <nav class="nav">
-  <a class="now" href="indexUSER.php">Home</a>
+  <a class="now" href="../index USER/indexUSER.php">Home</a>
   <a href="../shop user/shopUSER.php">Shop</a>
   <a href="../about user/aboutUSER.php">About</a>
   <a class="support" href="supportUSER.php">Support</a>
