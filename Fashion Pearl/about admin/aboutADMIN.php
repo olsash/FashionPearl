@@ -103,5 +103,20 @@ $result = $conn->query($sql);
             <p>&copy; 2024 FashionPearl. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
+
+<script>
+        let currentIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+    const slider = document.querySelector(".slider");
+
+    let currentIndex = 0;
+    function moveSlide(direction) {
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+        document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+</script>
 </html>
