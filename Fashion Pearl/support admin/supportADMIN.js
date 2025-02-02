@@ -38,3 +38,34 @@ document.getElementById("questionForm").addEventListener("submit", function(even
         answerContainer.style.display = "flex"; 
     }
 });
+
+document.getElementById('viewMessagesBtn').addEventListener('click', function() {
+    let messagesContainer = document.getElementById('messagesContainer');
+    let messagesTable = document.getElementById('messagesTable');
+    messagesContainer.innerHTML = '';  
+
+    messagesTable.style.display = 'table';
+
+    let tbody = messagesTable.getElementsByTagName('tbody')[0];
+    tbody.innerHTML = '';  
+
+    if (messages.length > 0) {
+        messages.forEach(function(message) {
+            let row = tbody.insertRow();
+
+            let cell1 = row.insertCell(0);
+            cell1.innerHTML = message.name;
+
+            let cell2 = row.insertCell(1);
+            cell2.innerHTML = message.email;
+
+            let cell3 = row.insertCell(2);
+            cell3.innerHTML = message.message;
+
+            let cell4 = row.insertCell(3);
+            cell4.innerHTML = message.created_at;
+        });
+    } else {
+        messagesContainer.innerHTML = '<p>No messages found.</p>';
+    }
+});
