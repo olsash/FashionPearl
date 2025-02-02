@@ -16,7 +16,7 @@ if (isset($_SESSION['username'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FashionPearl || Home</title>
-  <link rel="stylesheet" href="shopADMIN.css">
+  <link rel="stylesheet" href="shopUSER.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300&display=swap">
   <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
 </head>
@@ -26,8 +26,8 @@ if (isset($_SESSION['username'])) {
 
 <header class="header">
   <nav class="nav">
-  <a class="now" href="../index admin/indexADMIN.php">Home</a>
-  <a class="shop" href="shopADMIN.php">Shop</a>
+  <a class="now" href="../index user/indexUSER.php">Home</a>
+  <a class="shop" href="shopUSER.php">Shop</a>
   <a href="#">About</a>
   <a href="#">Support</a>
 </nav>
@@ -174,14 +174,18 @@ if (isset($_SESSION['username'])) {
       
 </section>
 
+
 <div class="products">
     <h2>Our Products </h2>
     <div class="product-grid" id="products"></div>
 </div>
 </div>
+
+
+
 </main>
 <div class="sidebar" id="sidebar"></div>
-<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+<div class="overlay" id="overlay" onclick="Sidebar.close()"></div>
 
 <footer class="footer">
 <div class="footer-section">
@@ -210,4 +214,4 @@ if (isset($_SESSION['username'])) {
 </body>
 </html>
 
-<script src="shopADMIN.js"></script>
+<script src="shopUSER.js"></script>
