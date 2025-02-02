@@ -75,7 +75,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="supportADMIN.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300&display=swap">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
 
@@ -84,16 +84,13 @@ $conn->close();
 
 <header class="header">
   <nav class="nav">
-  <a class="now" href="../index user/indexUSER.php">Home</a>
-  <a class="shop" href="shopUSER.php">Shop</a>
-  <a href="#">About</a>
-  <a href="#">Support</a>
+  <a class="now" href="../index admin/indexADMIN.php">Home</a>
+  <a class="shop" href="../shop admin/shopADMIN.php">Shop</a>
+  <a href="../about admin/aboutADMIN.php">About</a>
+  <a class="support" href="supportADMIN.php">Support</a>
 </nav>
 <div class="icons">
-  <a href="#" id="search-icon"><ion-icon name="search"></ion-icon></a>
-  <input type="text" id="search-input" class="hidden" placeholder="Search products...">
-  <a href="#"><ion-icon name="cart"></ion-icon></a>
-  <span class="separator">|</span>
+
   <a><ion-icon name="person-circle-outline" onclick="checkLogin()"></ion-icon></a>
 </div>
 </header>

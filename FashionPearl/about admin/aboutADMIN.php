@@ -39,10 +39,10 @@ $result = $conn->query($sql);
 
     <header class="header">
         <nav class="nav">
-            <a class="now" href="../index user/indexUSER.php">Home</a>
-            <a class="shop" href="shopUSER.php">Shop</a>
-            <a class="about" href="aboutUSER.php">About</a>
-            <a href="#">Support</a>
+        <a class="now" href="indexADMIN.php">Home</a>
+        <a href="../shop admin/shopADMIN.php">Shop</a>
+        <a  class="about" href="aboutADMIN.php">About</a>
+        <a href="../support admin/supportADMIN.php">Support</a>
         </nav>
         <div class="icons">
             <a><ion-icon name="person-circle-outline" onclick="checkLogin()"></ion-icon></a>

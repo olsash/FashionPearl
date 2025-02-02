@@ -34,8 +34,8 @@ a {
 
 
 .nav{
-   margin-top: 20px;
-   margin-left : 385px;
+   margin-top: 7px;
+   margin-left : 330px;
 }
 
 .logo ion-icon {
@@ -107,7 +107,7 @@ a {
   
   
   .icons{
-     margin-top: 22px;
+     margin-top: 2px;
   }
   
   .icons a {
@@ -187,7 +187,7 @@ a {
     margin-bottom: 0px;
     padding: 10px 0; 
     width: 100%; 
-    height: 85px; 
+    height: 100px; 
     background-color: #cdd0da; 
     z-index: 998; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
