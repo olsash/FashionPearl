@@ -90,7 +90,7 @@ if (isset($_SESSION['username'])) {
         <button class="button-value" onclick="filterProduct('Men')" data-category="Men"></button> <span>Men</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Accesories')" data-category="Accessories"></button> <span>Accesories</span>
+        <button class="button-value" onclick="filterProduct('Accessories')" data-category="Accessories"></button> <span>Accesories</span>
         </label>
     </div>
 </div>
@@ -134,7 +134,7 @@ if (isset($_SESSION['username'])) {
         <button class="button-value" onclick="filterProduct('Bags')" data-category="Bags"></button> <span>Bags</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Sunnglasses')" data-category="Sunglasses"></button> <span>Sunnglasses</span>
+        <button class="button-value" onclick="filterProduct('Sunglasses')" data-category="Sunglasses"></button> <span>Sunnglasses</span>
         </label>
         <label class="filter-button">
         <button class="button-value" onclick="filterProduct('Necklace')" data-category="Necklace"></button> <span>Necklace</span>
