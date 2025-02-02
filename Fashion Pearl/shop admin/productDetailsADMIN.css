@@ -839,3 +839,35 @@ body {
   background-color: black;
   color: white;
 }
+
+@media (max-width: 768px) {
+  #checkout {
+      font-size: 14px; 
+      padding: 10px;
+  }
+
+  .size-button {
+      font-size: 12px; 
+      padding: 4px 8px; 
+  }
+
+  .size-options {
+      gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  #checkout {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .size-button {
+      font-size: 12px;
+      padding: 4px 6px; 
+  }
+
+  .size-options {
+      gap: 6px; 
+  }
+}
