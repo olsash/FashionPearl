@@ -573,3 +573,104 @@ font-size: 14px;
 .footer-section ul li a:hover {
 text-decoration: underline;
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    padding-left: 40px; 
+  }
+
+  .footer-section {
+    margin-left: 40px;
+    margin-right: 40px;
+    flex: 1 1 100%;
+  }
+
+  .footer-section:nth-child(2) {
+    margin-left: 40px;
+  }
+
+  .footer-bottom {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    margin-left: 0;
+  }
+
+  .footer-section h3 {
+    font-size: 16px;
+  }
+
+  .footer-section ul li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding-left: 20px;
+  }
+
+  .footer-section {
+    margin-left: 20px;
+    margin-right: 20px;
+    flex: 1 1 100%; 
+  }
+
+  .footer-bottom {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    margin-left: 0;
+  }
+
+  .footer-section h3 {
+    font-size: 14px; 
+  }
+
+  .footer-section ul li a {
+    font-size: 12px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding-left: 10px; 
+  }
+
+  .footer-section {
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1 1 100%; 
+  }
+
+  .footer-bottom {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    margin-left: 0;
+  }
+
+  .footer-section h3 {
+    font-size: 12px; 
+  }
+
+  .footer-section ul li {
+    font-size: 11px; 
+  }
+
+  .footer-section ul li a {
+    font-size: 11px; 
+  }
+}
+
+      </style>
+
+  </body>
+  </html>
