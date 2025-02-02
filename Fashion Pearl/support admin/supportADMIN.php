@@ -66,6 +66,10 @@ $conn->close();
 
 ?>
 
+<script>
+    var messages = <?php echo json_encode($messages); ?>;
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
