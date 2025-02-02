@@ -107,7 +107,75 @@ img {
    text-decoration: none; 
    margin-right: 15px; 
 }
+@media (max-width: 1024px) {
+   .nav {
+     margin-left: 0;
+     justify-content: center;
+     padding: 0 10px; 
+   }
+ 
+   #search-input {
+     right: 5%;
+     width: 180px;
+     font-size: 0.9rem;
+     padding: 8px;
+   }
+ 
+   .nav a {
+     font-size: 1rem;
+     padding: 10px 18px;
+   }
+ }
+ 
+ @media (max-width: 768px) {
+   .nav {
+     flex-direction: column;
+     align-items: center;
+     padding: 15px 0; 
+   }
+ 
+   .nav a {
+     font-size: 1rem; 
+     padding: 10px 20px;
+     margin-bottom: 8px;
+     width: 100%;
+     text-align: center;
+   }
+ 
+   #search-input {
+     right: 5%;
+     width: 70%; 
+   }
+ 
+   .icons {
+     margin-top: 20px;
+   }
+ }
+ 
 
+ @media (max-width: 480px) {
+   .nav {
+     padding: 10px;
+   }
+ 
+   .nav a {
+     font-size: 0.9rem;
+     padding: 8px 18px;
+     margin-bottom: 10px; 
+     width: 100%;
+     text-align: center; 
+   }
+ 
+   #search-input {
+     width: 80%;
+     padding: 6px;
+     font-size: 0.8rem;
+   }
+ 
+   .icons {
+     margin-top: 15px;
+   }
+ }
 .separator {
    color: black; 
    font-size: 25px; 
