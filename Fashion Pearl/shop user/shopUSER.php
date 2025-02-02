@@ -173,7 +173,7 @@ if (isset($_SESSION['username'])) {
 </section>
 </section>
 <div class="products">
-    <h2>ADMIN</h2>
+    <h2>Our Products</h2>
     <div class="product-grid" id="products"></div>
 </div>
 </div>
