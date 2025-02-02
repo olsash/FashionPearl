@@ -85,28 +85,34 @@ class ProductManager {
 }
 
 class Filter {
-  static filterProduct(value) {
-      let elements = document.querySelectorAll(".card");
-      elements.forEach((element) => {
-          const price = parseInt(element.querySelector("h6").innerText.replace("€", ""));
-          let show = false;
-
-          if (value.includes("-")) {
-              const [min, max] = value.split("-").map(v => v === "more" ? Infinity : parseInt(v));
-              show = price >= min && price <= max;
-          } else if (value === "All" || element.classList.contains(value)) {
-              show = true;
-          }
-
-          element.classList.toggle("hide", !show);
-      });
-      if (button.getAttribute('data-category') === value) {
-        button.classList.add("active");
-        console.log("Button activated:", button.getAttribute('data-category'));
-      }
-    
-  }
+    static filterProduct(value) {
+        let elements = document.querySelectorAll(".card");
+        elements.forEach((element) => {
+            const price = parseInt(element.querySelector("h6").innerText.replace("€", ""));
+            let show = false;
+  
+            if (value.includes("-")) {
+                const [min, max] = value.split("-").map(v => v === "more" ? Infinity : parseInt(v));
+                show = price >= min && price <= max;
+            } else if (value === "All" || element.classList.contains(value)) {
+                show = true;
+            }
+  
+            element.classList.toggle("hide", !show);
+        });
+  
+        document.querySelectorAll(".button-value").forEach(btn => {
+            btn.classList.remove("active");
+        });
+  
+        let clickedButton = document.querySelector(`button[data-category="${value}"]`);
+        if (clickedButton) {
+            clickedButton.classList.add("active");
+            console.log("Button activated:", clickedButton.getAttribute('data-category'));
+        }
+    }
 }
+  
 document.getElementById("add-product-btn").addEventListener("click", function() {
   document.getElementById("add-product-container").style.display = "block";
   document.querySelector(".modal-overlay").style.display = "block";
