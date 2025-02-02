@@ -19,3 +19,19 @@
     </nav>
     <div class="icons">
     <a href="#" id="cart-icon">
+    <ion-icon name="cart"></ion-icon>
+        <span id="cart-count">0</span>
+    </a>
+
+    <div id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button id="close-cart">&times;</button>
+        </div>
+        <div id="cart-items">
+        </div>
+        <div class="cart-footer">
+            <button id="checkout">Checkout</button>
+        </div>
+    </div>
+</div>
