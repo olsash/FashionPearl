@@ -16,7 +16,9 @@ if (isset($_SESSION['username'])) {
   <title>FashionPearl || Home</title>
   <link rel="stylesheet" href="shopUSER.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300&display=swap">
-  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js">
+    
+  </script>
 </head>
 <body>
     
