@@ -171,9 +171,65 @@ if (isset($_SESSION['username'])) {
 </div>
       
 </section>
+</section>
+    <button id="toggle-table-btn" class="table-button">View Product Logs</button>
+
+<div id="table-popup" class="table-popup">
+    <div class="table-container">
+        <span class="close-button" onclick="closeTablePopup()">&times;</span>
+        <h2>Product Logs</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Collection</th>
+                    <th>Product Category</th>
+                    <th>Action Type</th>
+                    <th>User ID</th>
+                    <th>Username</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+
+                
+                $query = "SELECT * FROM product_logs ORDER BY action_timestamp DESC";
+                $result = mysqli_query($conn, $query);
+
+                
+                if ($result) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td>{$row['id']}</td>";
+                        echo "<td>{$row['product_id']}</td>";
+                        echo "<td>{$row['product_name']}</td>";
+                        echo "<td>{$row['price']}</td>";
+                        echo "<td>{$row['collection']}</td>";
+                        echo "<td>{$row['category']}</td>";
+                        echo "<td>{$row['action_type']}</td>";
+                        echo "<td>{$row['user_id']}</td>";
+                        echo "<td>{$row['username']}</td>";
+                        echo "<td>{$row['action_timestamp']}</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='6'>No logs available.</td></tr>";
+                }
+
+                
+                ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 <div class="products">
     <h2>Our Products </h2>
+    <button id="add-product-btn" class="plus-button">+</button>
     <div class="product-grid" id="products"></div>
 </div>
 <div class="add-product-container" id="add-product-container">
