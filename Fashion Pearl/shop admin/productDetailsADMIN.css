@@ -506,3 +506,60 @@ body {
     form {
         margin: 0;
     }
+
+      @media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #add-to-cart-button, .delete-button, .edit-button {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .form-container {
+        flex-direction: column;
+    }
+
+    .quantity {
+        flex-direction: column;
+    }
+    
+    .stars {
+        font-size: 14px;
+    }
+
+    .review-text {
+        font-size: 12px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .stars {
+        font-size: 12px;
+    }
+
+    .review-text {
+        font-size: 10px;
+    }
+
+    .description, .usage, .additional-info {
+        font-size: 12px;
+    }
+
+    .quantity input {
+        width: 35px;
+    }
+
+    #add-to-cart-button, .delete-button, .edit-button {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .form-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
