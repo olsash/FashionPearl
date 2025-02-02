@@ -477,6 +477,115 @@ h3 {
 }
 
 
+.modal-overlay {
+   font-family: 'Roboto', sans-serif;
+ 
+     display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.4);
+     z-index: 999;
+     transition: opacity 0.3s ease-in-out;
+ }
+ 
+ .add-product-container {
+     display: none;
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 90%;
+     max-width: 500px;
+     padding: 20px;
+     background: white;
+     border-radius: 12px;
+     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+     text-align: center;
+     z-index: 1001;
+     border: 1px solid #ddd;
+     opacity: 0;
+     transition: opacity 0.3s ease-in-out;
+ }
+ 
+ .add-product-form label {
+     margin-left:20px;
+     display: block;
+     font-weight: bold;
+     text-align: left;
+     margin-top: 10px;
+ }
+ 
+ .add-product-form input {
+     width: 90%;
+     padding: 8px;
+     margin-top: 5px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+ }
+ 
+ .add-product-form select {
+     width: 94%;
+     padding: 8px;
+     margin-top: 5px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+ }
+ 
+ .plus-button {
+     margin-left:10px;
+     background: #333;
+     color: white;
+     font-size: 24px;
+     border: none;
+     padding: 10px 17px;
+     border-radius: 50%;
+     cursor: pointer;
+     margin-bottom: 20px;
+ }
+ 
+ .plus-button:hover {
+     background: #555;
+ }
+ 
+ .add-product-btn {
+     background-color: #cdd0da;
+     color: white;
+     padding: 12px;
+     border: none;
+     font-size: 16px;
+     border-radius: 20px;
+     cursor: pointer;
+     transition: 0.3s;
+     width: 90%;
+     margin-top: 40px;
+ }
+ 
+ .add-product-btn:hover {
+     background: #a5a7ad;
+ }
+ 
+ .close-btn {
+     background: black;
+     color: white;
+     padding: 12px;
+     border: none;
+     font-size: 16px;
+     border-radius: 20px;
+     cursor: pointer;
+     transition: 0.3s;
+     width: 90%;
+     margin-top: 10px;
+     margin-bottom:20px;
+ }
+ 
+ .close-btn:hover {
+     background: gray;
+ }
+
+
 .products {
 font-family: 'Roboto', sans-serif;
 margin: 20px auto;
