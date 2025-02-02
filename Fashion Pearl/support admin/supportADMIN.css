@@ -37,13 +37,13 @@
 }
 
 #answer-container {
-display: none; /* Initially hidden */
+display: none; 
 flex-direction: column;
 align-items: center;
 width: 70%;
 max-width: 70%;
 padding: 30px;
-background: rgb(67, 100, 117); /* Same as .qa-container */
+background: rgb(67, 100, 117); 
 border-radius: 10px;
 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 margin-left: 200px;
@@ -56,4 +56,80 @@ font-size: 18px;
 color: white;
 text-align: center;
 word-wrap: break-word;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color:rgb(150, 175, 194);
+    font-weight: bold;
+    color: #333;
+}
+
+#messagesContainer {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+tr:hover {
+    background-color:rgb(11, 36, 53);
+}
+
+#viewMessagesBtn {
+    background-color:rgb(61, 96, 110);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+#viewMessagesBtn:hover {
+    background-color:rgb(61, 128, 128);
+}
+
+.message-block {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    background-color:rgb(5, 36, 49);
+}
+
+.message-block p {
+    margin: 5px 0;
+}
+
+.message-block .name {
+    font-weight: bold;
+    color: #333;
+}
+
+.message-block .email {
+    font-style: italic;
+    color: #777;
+}
+
+.message-block .message {
+    margin-top: 10px;
+    color: #555;
+}
+
+.message-block .timestamp {
+    font-size: 12px;
+    color: #aaa;
 }
