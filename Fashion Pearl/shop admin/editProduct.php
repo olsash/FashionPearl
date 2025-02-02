@@ -103,3 +103,63 @@
               <p>&copy; 2024 FashionPearl. All rights reserved.</p>
           </div>
       </footer>
+
+      <style>
+
+
+h1, h2 {
+    color: #333;
+    font-weight: bolder;
+}
+
+.product-image {
+    margin-top:0px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image img {
+    margin-top:0px;
+    margin-left: 5%;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-details {
+    padding:30px;
+    padding-bottom:40px;
+    margin-left:-25%;
+    margin-right: 50px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.edit-button:hover {
+    background-color: gray;
+    transform: scale(1.010);
+}
