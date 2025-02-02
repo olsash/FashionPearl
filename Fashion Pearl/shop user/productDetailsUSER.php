@@ -98,18 +98,6 @@ $sizes = ['XS','S', 'M', 'L', 'XL'];
 
                 <div class="additional-info">
                     <p>Dispatched in 5 – 7 weeks.</p>
-                    <div class="form-container">
-                    <form action="../shop admin/deleteProduct.php" method="POST" onsubmit="return confirm('Are you sure you want to delete this product?');">
-                        <input type="hidden" name="product_name" value="<?php echo htmlspecialchars($product_name); ?>">
-                        <button type="submit" class="delete-button">Delete</button>
-                    </form>
-                    <form action="../shop admin/editProduct.php" method="GET">
-                    <input type="hidden" name="product_name" value="<?php echo htmlspecialchars($product_name); ?>">
-                    <input type="hidden" name="price" value="<?php echo htmlspecialchars($formatted_price); ?>">
-                    <input type="hidden" name="image" value="<?php echo htmlspecialchars($image_path); ?>">
-                    <button type="submit" class="edit-button">Edit</button>
-                    </form>
-                    </div>
                 </div>
             </div>
         </div>
