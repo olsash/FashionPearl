@@ -52,14 +52,14 @@ if (isset($_SESSION['username'])) {
             <button id="checkout">Checkout</button>
         </div>    
 </div>  <span class="separator">|</span>
-  <a><ion-icon name="person-circle-outline" onclick="checkLogin()"></ion-icon></a>
+  <a><ion-icon name="person-circle-outline" onclick="Auth.checkLogin()"></ion-icon></a>
 </div>
 </header>
 <div id="search-bar-container" style="display: none;">
-  <div class="search-bar-overlay" onclick="toggleSearchBar()"></div>
+  <div class="search-bar-overlay" onclick="Search.toggle()"></div>
   <div class="search-bar">
     <input type="text" id="search-input" placeholder="Search products...">
-    <button onclick="performSearch()">Search</button>
+    <button onclick="Search.perform()">Search</button>
   </div>
 </div>
 <main>
@@ -86,13 +86,13 @@ if (isset($_SESSION['username'])) {
         </h3>
         <div class="filter-content">
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Women')" data-category="Women"></button> <span>Women</span>
+        <button class="button-value" onclick="Filter.filterProduct('Women')" data-category="Women"></button> <span>Women</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Men')" data-category="Men"></button> <span>Men</span>
+        <button class="button-value" onclick="Filter.filterProduct('Men')" data-category="Men"></button> <span>Men</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Accessories')" data-category="Accessories"></button> <span>Accesories</span>
+        <button class="button-value" onclick="Filter.filterProduct('Accessories')" data-category="Accessories"></button> <span>Accesories</span>
         </label>
     </div>
 </div>
@@ -103,49 +103,49 @@ if (isset($_SESSION['username'])) {
     </h3>
     <div class="filter-content">
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('All')" data-category="All"></button> <span>All</span>
+        <button class="button-value" onclick="Filter.filterProduct('All')" data-category="All"></button> <span>All</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Tops')" data-category="Tops"></button> <span>Tops</span>
+        <button class="button-value" onclick="Filter.filterProduct('Tops')" data-category="Tops"></button> <span>Tops</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('T-Shirt')" data-category="TShirt"></button> <span>T-Shirt</span>
+        <button class="button-value" onclick="Filter.filterProduct('T-Shirt')" data-category="TShirt"></button> <span>T-Shirt</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Sweater')" data-category="Sweater"></button> <span>Sweater</span>
+        <button class="button-value" onclick="Filter.filterProduct('Sweater')" data-category="Sweater"></button> <span>Sweater</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Jeans')" data-category="Jeans"></button> <span>Jeans</span>
+        <button class="button-value" onclick="Filter.filterProduct('Jeans')" data-category="Jeans"></button> <span>Jeans</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Skirt')" data-category="Skirt"></button> <span>Skirt</span>
+        <button class="button-value" onclick="Filter.filterProduct('Skirt')" data-category="Skirt"></button> <span>Skirt</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Dress')" data-category="Dress"></button> <span>Dress</span>
+        <button class="button-value" onclick="Filter.filterProduct('Dress')" data-category="Dress"></button> <span>Dress</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Hat')" data-category="Hat"></button> <span>Hat</span>
+        <button class="button-value" onclick="Filter.filterProduct('Hat')" data-category="Hat"></button> <span>Hat</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Shoes')" data-category="Shoes"></button> <span>Shoes</span>
+        <button class="button-value" onclick="Filter.filterProduct('Shoes')" data-category="Shoes"></button> <span>Shoes</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Watch')" data-category="Watch"></button> <span>Watch</span>
+        <button class="button-value" onclick="Filter.filterProduct('Watch')" data-category="Watch"></button> <span>Watch</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Bags')" data-category="Bags"></button> <span>Bags</span>
+        <button class="button-value" onclick="Filter.filterProduct('Bags')" data-category="Bags"></button> <span>Bags</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Sunglasses')" data-category="Sunglasses"></button> <span>Sunnglasses</span>
+        <button class="button-value" onclick="Filter.filterProduct('Sunglasses')" data-category="Sunglasses"></button> <span>Sunnglasses</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Necklace')" data-category="Necklace"></button> <span>Necklace</span>
+        <button class="button-value" onclick="Filter.filterProduct('Necklace')" data-category="Necklace"></button> <span>Necklace</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Earrings')" data-category="Earrings"></button> <span>Earrings</span>
+        <button class="button-value" onclick="Filter.filterProduct('Earrings')" data-category="Earrings"></button> <span>Earrings</span>
         </label>
         <label class="filter-button">
-        <button class="button-value" onclick="filterProduct('Ring')" data-category="Ring"></button> <span>Ring</span>
+        <button class="button-value" onclick="Filter.filterProduct('Ring')" data-category="Ring"></button> <span>Ring</span>
         </label>
     </div>
 </div>
@@ -156,16 +156,16 @@ if (isset($_SESSION['username'])) {
             </h3>
              <div class="filter-content">
                 <label class="filter-button">
-                <button class="button-value" onclick="filterProduct('0-50')" data-category="0-50"></button> <span>0€ - 50€</span>
+                <button class="button-value" onclick="Filter.filterProduct('0-50')" data-category="0-50"></button> <span>0€ - 50€</span>
                 </label>
                 <label class="filter-button">
-                <button class="button-value" onclick="filterProduct('50-100')" data-category="50-100"></button> <span>50€ - 100€</span>
+                <button class="button-value" onclick="Filter.filterProduct('50-100')" data-category="50-100"></button> <span>50€ - 100€</span>
                 </label>
                 <label class="filter-button">
-                <button class="button-value" onclick="filterProduct('100-150')" data-category="100-150"></button> <span>100€ - 150€</span>
+                <button class="button-value" onclick="Filter.filterProduct('100-150')" data-category="100-150"></button> <span>100€ - 150€</span>
                 </label>
                 <label class="filter-button">
-                <button class="button-value" onclick="filterProduct('150-more')" data-category="150-more"></button> <span>Over 150€</span>
+                <button class="button-value" onclick="Filter.filterProduct('150-more')" data-category="150-more"></button> <span>Over 150€</span>
                 </label>
             </div>
         </div>        
@@ -278,7 +278,7 @@ if (isset($_SESSION['username'])) {
 
 
 <div class="modal-overlay"></div>
-
+                
 </main>
 <div class="sidebar" id="sidebar"></div>
 <div class="overlay" id="overlay" onclick="closeSidebar()"></div>

@@ -24,7 +24,7 @@ if (isset($_SESSION['username'])) {
     <nav class="nav">
       <a class="now" href="indexUSER.php">Home</a>
       <a href="../shop user/shopUSER.php">Shop</a>
-      <a href="#">About</a>
+      <a href="../about user/aboutUSER.php">About</a>
       <a href="#">Support</a>
     </nav>
     <div class="icons">
@@ -35,7 +35,7 @@ if (isset($_SESSION['username'])) {
     <div class="banner-content">
       <h1>INDULGE <br> NOW</h1>
       <p>Your Wardrobe, Our Planet</p>
-      <button class="shop-now-btn" onclick="window.location.href='../shop admin/shopADMIN.php'">Shop now</button>
+      <button class="shop-now-btn" onclick="window.location.href='../shop user/shopUSER.php'">Shop now</button>
     </div>
   </main>
   <div class="sidebar" id="sidebar"></div>
