@@ -461,3 +461,48 @@ body {
     font-size: 14px;
     color: #6b7280;
 }
+
+.delete-button {
+    background-color: #dc2626;
+    color: white; 
+    font-size: 16px; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-button:hover {
+    background-color: #b91c1c;
+    transform: scale(1.05);
+}
+
+.edit-button {
+    background-color:rgb(79, 120, 182); 
+    color: white; 
+    font-size: 16px; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-button:hover {
+    background-color: rgb(57, 104, 174); 
+    transform: scale(1.05); 
+}
+
+.edit-button:focus {
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-container {
+        display: flex;
+        gap: 10px; 
+    }
+    form {
+        margin: 0;
+    }
