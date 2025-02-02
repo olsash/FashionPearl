@@ -79,7 +79,7 @@ fetch("fetchProducts.php")
         let buttons = document.querySelectorAll(".button-value");
       
         buttons.forEach((button) => {
-          button.classList.remove("active");
+        button.classList.remove("active");
         });
       
         buttons.forEach((button) => {
