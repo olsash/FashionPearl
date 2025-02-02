@@ -8,9 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const sizeButtons = document.querySelectorAll(".size-button");
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let selectedSize = null; // To track selected size
+    let selectedSize = null; 
 
-    // Handle size selection
     sizeButtons.forEach(button => {
         button.addEventListener("click", function () {
             sizeButtons.forEach(btn => btn.classList.remove("selected"));
@@ -27,3 +26,27 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById("close-cart").addEventListener("click", function() {
     document.getElementById("cart-sidebar").classList.remove("open");
 });
+
+sizeButtons.forEach(button => {
+    button.addEventListener("click", function () {
+        sizeButtons.forEach(btn => btn.classList.remove("selected"));
+        this.classList.add("selected");
+        selectedSize = this.getAttribute("data-size"); 
+    });
+});
+
+
+
+    cartIcon.addEventListener("click", () => {
+        cartSidebar.classList.toggle("show");
+    });
+
+    closeCart.addEventListener("click", () => {
+        cartSidebar.classList.remove("show");
+    });
+
+    addToCartButton.addEventListener("click", () => {
+    if (!selectedSize) {
+        alert("Please select a size before adding to cart!");
+        return;
+    }
