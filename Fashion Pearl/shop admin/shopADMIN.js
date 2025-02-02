@@ -75,15 +75,19 @@ fetch("fetchProducts.php")
         });
       });
 
-function filterProduct(value) {
-let buttons = document.querySelectorAll(".button-value");
-buttons.forEach((button) => {
-  if (value.toUpperCase() == button.innerText.toUpperCase()) {
-    button.classList.add("active");
-  } else {
-    button.classList.remove("active");
-  }
-});
+      function filterProduct(value) {
+        let buttons = document.querySelectorAll(".button-value");
+      
+        buttons.forEach((button) => {
+          button.classList.remove("active");
+        });
+      
+        buttons.forEach((button) => {
+          if (button.getAttribute('data-category') === value) {
+            button.classList.add("active");
+            console.log("Button activated:", button.getAttribute('data-category'));
+          }
+        });
 
 let elements = document.querySelectorAll(".card");
 elements.forEach((element) => {
