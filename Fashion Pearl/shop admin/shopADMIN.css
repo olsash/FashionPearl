@@ -1006,4 +1006,156 @@ display: none;
    background: #f1f1f1;
    transition: 0.3s;
  }
-  
+
+ 
+#cart-icon {
+  position: relative;
+  font-size:20px;
+}
+
+#cart-count {
+  position: absolute;
+  top: -10px;
+  right: -6px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding-right: 6px;
+  padding-left:6px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  border-radius: 50%;
+}
+
+
+#cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.15);
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  border-radius: 10px 0 0 10px;
+}
+
+#cart-sidebar.open {
+  right: 0;
+}
+
+.cart-title {
+  margin: 10px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.cart-header{
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  background: #cdd0da;
+  color: white;
+  text-align: left;
+  border-radius: 10px 0 0 0;
+}
+
+#close-cart {
+  position: absolute;
+  top: 25px;
+  right: 17px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+#close-cart:hover {
+  color: #ddd;
+}
+
+#cart-items {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.cart-item-content {
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+  border: 2px solid #cdd0da;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.cart-item-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.cart-item-price {
+  font-size: 14px;
+  color: #777;
+  margin-top: 3px;
+}
+
+.cart-remove-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: gray;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cart-remove-btn:hover {
+  color: #ddd;
+  transform: scale(1.2);
+}
+
+.cart-footer {
+  padding: 15px;
+  background: #f8f8f8;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+#checkout {
+  background: black;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#checkout:hover {
+  background: gray;
+  transform: scale(1.05);
+}
